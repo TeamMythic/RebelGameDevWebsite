@@ -13,8 +13,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Konkhmer+Sleokchher&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     
     <!-- --{Personal CSS}-- -->
-    <link rel="stylesheet" href="MythicsNavbarDocumentation.css">
-    <link rel="stylesheet" href="RGDDocs/documentation.css">
+    <link rel="stylesheet" href="../MythicsNavbarDocumentation.css">
+    <link rel="stylesheet" href="documentation.css">
 </header>
 <style>
     /*
@@ -36,7 +36,7 @@
         margin-bottom: 10px;
         text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
         /* Clip Background Image */
-        background: url(../Images/graphics/Scrollers/scroll1blue.png) repeat-y;
+        background: url(../../Images/graphics/Scrollers/scroll1blue.png) repeat-y;
         -webkit-background-clip: text;
         background-clip: text;
         /* Animate Background Image */
@@ -212,7 +212,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#stay" class="unityBasics4-btn">Static Methods</a>
+                            <a href="#"stay class="unityBasics4-btn">Static Methods</a>
                             <ul class="unityBasics4-show">
                                 <li><a href="#">How To Use</a></li>
                                 <li><a href="#">Statics vs. Singletons</a></li>
@@ -270,25 +270,158 @@
         
         <!-- --{Start If Documentation}-- -->
         <div class="docSection">
-            <h1 id="one"><span>Welcome To Rebel Game Devs Documentation</span></h1>
-            <p id="style1">
-            All Unity related inquiries all in one place.
-            </p>
-            <div class="docInnerInnerSection">
-                <h1>New Here?</h1>
-                <p>
-                    Click the <span id="style2">blue button</span> located at the top right of the screen to open the <span id="style1">Rebel Game Devs Documentation</span>.
-                    To Start from the beginning select Rebel Game Devs Docs <span id="style1">&#8608;</span> How To Use <span id="style1">&#8608;</span> Getting Started.
-                </p>
-
-                <p>
-                    <span id="warning">
-                        &#9888 NOTE: It's important that you carefully read the rules otherwise there is a good chance that your GitHub push will be denied mergind to the Dev Branch.
-                    </span>
-                </p>
+            <h1 id="one"><span>Geting Your Project Setup With GitHub Desktop</span></h1>
+            <p>Make Sure you have GitHub Desktop Installed. You can install it <a href="https://desktop.github.com" target="_blank">here</a></p>
+            <div class="docInnerSection">
+                <div class="docInnerInnerSection">
+                    <h1>GitHub Desktop Installation Open Source Project</h1>
+                    <p>
+                    1) Open GitHub Desktop and click file --> clone repository.
+                    </p>
+                    <img src="../GitStuff/git1.png" alt="GitImg1"></img>
+                    <p>
+                        2) Navigate to the github <a href="https://github.com/RebelGameDevs/Rebel-Game-Dev-JRPG" target="_blank">repository</a>. Copy the url .
+                        Once done you can paste the url as shown below. Make sure to also select a desired folder location. Then click clone.
+                    </p>
+                    <img src="../GitStuff/git2.png" alt="GitImg2"></img>
+                    <p>
+                        
+                    </p>
+                    
+                </div>
+                <div class="docInnerInnerSection">
+                    <h1>Branches</h1>
+                    <p>
+                        The Open Source Project has 2 main branches. The "Main Branch" is the entire project which is updated every few weeks (merged from the dev branch).
+                        The other branch is the "Dev Branch" which is where you will update your changes to the project. 
+                    </p>
+                    <p>
+                        When working on a small feature or project
+                        you can create a personal branch which is tied only to your machine.
+                        Here is some instructions on how to achieve creating a personal branch and uploading to the dev branch repo:
+                    </p>
+                </div>
+                <div class="docInnerInnerSection">
+                    <h1>Creating Your Own Branch</h1>
+                    <p>
+                        <span id="style2">Please scroll down to see how to get your unity project framework setup before starting this step</span>
+                    </p>
+                    <p>
+                        1) Click "Current Branch" and select "Create Branch"
+                    </p>
+                    <img src="../GitStuff/git3.png" alt="GitImg3"></img>
+                    <p>
+                        2) Pick an name for your branch, personally I use my name, then select the branch based off of the dev branch.
+                        From here you can select "Create Branch". Do not publish branch to repo until you have finished your work for the day or session.
+                    </p>
+                    <img src="../GitStuff/git4.png" alt="GitImg4"></img>
+                    <p>
+                        For this example I created 1 material in my folder for the Open Source Project as shown below.
+                    </p>
+                    <img src="../GitStuff/git5.png" alt="GitImg5"></img>
+                    <br><br>
+                </div>
+                <div class="docInnerInnerSection">
+                    <h1>Posting Your Changes To Everyone Else</h1>
+                    <p>
+                        The really cool thing about the Open Source Project is it's live and active. For everyone else to see
+                        your changes you need to post your changes to the dev branch. So let's see how we can achieve that.
+                    </p>
+                    <p>
+                        1) Once you are happy with your changes you can review them back in the GitHub Desktop application.
+                    </p>
+                    <img src="../GitStuff/git6.png" alt="GitImg6"></img>
+                    <p>
+                        2) Next give a summary (like a subject) and a Description and click "Commit to (Your Branch Name Here)".
+                    </p>
+                    <img src="../GitStuff/git7.png" alt="GitImg7"></img>
+                    <p>
+                        3) Then select "Publish Branch".
+                    </p>
+                    <img src="../GitStuff/git8.png" alt="GitImg8"></img>
+                    <p>
+                        4) You can then select preview pull request.
+                    </p>
+                    <img src="../GitStuff/git9.png" alt="GitImg9"></img>
+                    <p>
+                        5) Finally you can now select the "dev" branch to commit to and then select "Create Pull Request". Now you're done!
+                    </p>
+                    <img src="../GitStuff/git10.png" alt="GitImg10"></img>
+                </div>
+                <div class="docInnerInnerSection">
+                    <h1>How To See Everyone Else's Changes</h1>
+                    <p>
+                        To update your project to see everyone's changes you need to open GitHub Desktop. From here make sure the current branch says dev branch.
+                        From here you can select fetch origin (sometimes will say pull). NOTE: if you have a personal branch you will not see the changes on there.
+                    </p>
+                </div>
             </div>
-
-        </div>
+            <h1 id="one"><span>Steps To Get Unity Your Unity Project Setup With The Open Source Framework</span></h1>
+            <p>Make Sure you have Unity Hub Installed. You can install it <a href="https://unity.com/download" target="_blank">here</a></p>
+            <div class="docInnerSection">
+                <div class="docInnerInnerSection">
+                    <p>
+                        1) Open Unity Hub and select installs. Click install editor and install "Unity 2021.3.24.1f".
+                    </p>
+                    <p>
+                        <span id="style2">If you haven't already please scroll back up to get the GitHub repository setup now.</span>
+                    </p>
+                    <p>
+                        2) Next Navigate To Your Project Tab. Once you have cloned the git repository, click open <span id="style1">&#8608;</span>
+                        Open project from disk. Then select the location where you cloned the project.
+                    </p>
+                    <img src="Images/HowToUse/IMG1.png" alt="img1">
+                    <br>
+                </div>
+                <div class="docInnerInnerSection">
+                    <h1>Welcome to the RGDs OSP</h1>
+                    <p>
+                    This is the <span id="style2">Rebel Game Devs Open Source Project</span> or <span id="style2">RGD-OSP</span> for short. There is a wide variety of documentation covering tools created by officers and members.
+                    There is also many different learning scenes, helper methods, and so much more. Please feel free to navigate the websites documentation
+                    to learn about these tools.
+                    </p>
+                    <img src="Images/HowToUse/IMG2.png" alt="img2">
+                    <br>
+                </div>
+                <div class="docInnerInnerSection">
+                    <h1>Where to start</h1>
+                    <p>
+                    Unity has so many different tools and windows. There are 3 main windows: Project, Hierarchy, and Inspector.
+                    </p>
+                </div>
+                <div class="docInnerInnerSection">
+                    <h1>Project Tab</h1>
+                    <p>
+                    The project tab inside of Unity is one of the most if not the most important window. The project tab is responsible for holding
+                    your game assets. One important folders is the "Resources Folder". Unity does not come with this installed, but in a fresh project
+                    it is recommended to add it. The Open Source Framework already has one created with some important files. The reason this is so important
+                    is because we use Resources.Load<type>("path", type) as type to get a resource/asset loading directly from resources.
+                    </p>
+                    <img src="Images/HowToUse/IMG3.png" alt="img3">
+                    <br>
+                </div>
+                <div class="docInnerInnerSection">
+                    <h1>Hierarchy Tab</h1>
+                    <p>
+                    The Hierarchy holds all GameObjects and more in the scene. You can think of the Hierarchy in Unity as a parent that is keeping a eye on all of it's children.
+                    For instance, if you as a parent knows that your child is in their bedroom, you will look for them in their bedroom. Same thing apply's with the hierarchy.
+                    If you as the developer code in your script to find a specific game object you can find them using the hierarchy.
+                    </p>
+                    <img src="Images/HowToUse/IMG4.png" alt="img4">
+                    <br>
+                </div>
+                <div class="docInnerInnerSection">
+                    <h1>Inspector Tab</h1>
+                    <p>
+                    The Inspector holds all the information regarding the selected Asset/GameObject/File. This is used most often as you are constantly adding/removing scripts,
+                    changing data values on your scripts, etc.
+                    </p>
+                    <img src="Images/HowToUse/IMG5.png" alt="img5">
+                    <br>
+                </div>
+                
+            </div>
+            </div>
 
     </main>
     
