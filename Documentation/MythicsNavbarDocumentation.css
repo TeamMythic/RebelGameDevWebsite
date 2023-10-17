@@ -1,0 +1,543 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+:root
+{
+    font-size: 16px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    --text-primary: #b6b6b6;
+    --text-secondary: #ececec;
+    --bg: #23232e;
+    --bg-primary: #23232e;
+    --bg-secondary: #141418; 
+    --bgDropdownPrimary: rgb(0, 22, 59); 
+    --bgDropdownSecondary:  rgb(49, 143, 183); 
+    --bgDropdownInnerChild1Primary: rgb(0, 65, 3); 
+    --bgDropdownInnerChild1Secondary:  rgb(101, 197, 122); 
+}
+h1
+{
+    text-align: center;
+    color: hotpink;
+}
+body
+{
+    color: black;
+    background-color: #15161c;
+    margin: 0;
+    padding: 0;
+}
+body::-webkit-scrollbar
+{
+    width: .75rem;
+}
+body::-webkit-scrollbar-track
+{
+    background: #1e1e24;
+}
+body::-webkit-scrollbar-thumb
+{
+    background: #b84949;
+    border-radius: 20px;
+}
+main
+{
+    margin-top: 30px;
+    margin-left: 5rem;
+    margin-right: 0rem;
+}
+.navbar
+{
+    margin-top: -30px;
+    width: 5rem;
+    height: 101vh;
+    position: fixed;
+    background-color: var(--bg-primary);
+    transition: width 200ms ease;
+    z-index: 10;
+}
+.navbar-nav
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+    height: 100%;
+}
+.nav-item
+{
+    width: 100%;
+}
+.nav-item:last-child
+{
+    margin-top: auto;
+}
+.nav-link
+{
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    fill: rgb(255, 43, 43);
+    filter: grayscale(100%) opacity(.7);
+    transition: .25s;
+}
+.nav-link:hover
+{
+    filter: grayscale(0%) opacity(1);
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+}
+.link-text
+{
+    display: none;
+    margin-left: 1rem;
+}
+.nav-link svg
+{
+    min-width: 2rem;
+    margin: 0 1.5rem;
+}
+.navbar:hover
+{
+    width: 20rem;
+}
+.navbar:hover .link-text
+{
+    display: block;
+}
+.logo
+{
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 0rem;
+    margin-left: 0px;
+    text-align: center;
+    color: var(--text-secondary);
+    background: var(--bg-secondary);
+    width: 100%;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3ch;
+}
+.logo svg
+{
+    transform: rotate(0deg);
+    transition: transform .5s;
+}
+.navbar:hover .logo svg
+{
+    transform: rotate(-360deg);
+}
+/*
+=======================================================
+                 Documentation Nav Bar              
+=======================================================
+*/
+.docTextHeader 
+{
+  text-transform: uppercase;
+  letter-spacing: .5em;
+  display: inline-block;
+  border: 4px double rgba(255, 255, 255, 0.25);
+  border-width: 4px 0;
+  text-align: center; /* Center the text */
+  padding: 1.5em 0em;
+  position: relative;
+  left: 0; 
+  right: 0; 
+  width: 100%;
+  overflow: visible;
+
+}
+.docTextHeader p
+{
+    overflow: visible;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    font-family: "Young Serif", sans-serif;
+    text-shadow: 10px 10px 10px rgba(0,0,0,.5);
+    -webkit-text-stroke: 0px rgb(0, 0, 0);
+}
+.docTextHeader p span 
+{
+  text-align: center;
+  font: 700 3em/1 "Oswald", sans-serif;
+  letter-spacing: 0;
+  padding: 0.25em 0 0.325em;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  
+  
+  text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
+  /* Clip Background Image */
+  background: url(../Images/graphics/Scrollers/scroll1blue.png) repeat-y;
+  -webkit-background-clip: text;
+  background-clip: text;
+  /* Animate Background Image */
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: aitf 80s linear infinite;
+  animation: aitf 80s linear infinite;
+  /* Activate hardware acceleration for smoother animations */
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+
+}
+@-webkit-keyframes aitf 
+{
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+/* Animate Background Image */
+@keyframes aitf {
+	0% { background-position: 0% 50%; }
+	100% { background-position: 100% 50%; }
+}
+@media only screen and (max-width: 1100px) 
+{
+    .docTextHeader p span 
+    {
+        font: 700 2em/1 "Oswald", sans-serif;
+        letter-spacing: 0;
+    }
+    .docTextHeader p
+    {
+        font-size: 16px;
+    }
+}
+.docTextHeader p span#red
+{
+    background: url(../Images/graphics/Scrollers/scroll1red.png) repeat-y;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+.docTextHeader p span#green
+{
+    background: url(../Images/graphics/Scrollers/scroll1green.png) repeat-y;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+.docTextHeader p span#orange
+{
+    background: url(../Images/graphics/Scrollers/scroll1orange.png) repeat-y;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.docSection
+{
+    display: grid;
+    place-items: center;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #080a0e;
+}
+.docSection h1
+{
+    font-family: "Raleway", sans-serif;
+    letter-spacing: 5px;
+    font-size: 32px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+.docSection h1#one
+{
+    margin: 30px;
+    color: rgb(0, 119, 255);
+}
+.docSection h1 span
+{
+    overflow: visible;
+    font-size: 48px;
+    font-weight: 600;
+    text-shadow: 0px 0px 50px rgba(0, 51, 255, 0.758);
+    
+}
+.docSection p
+{
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-family: "Raleway", sans-serif;
+    text-align: center;
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    margin: 30px;
+
+}
+.docSection a
+{
+    text-align: center;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    color: #fc6464;
+    font-weight: 400;
+}
+
+.docInnerSection
+{
+    display: grid;
+    padding: 20px;
+    width: 85%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    place-items: center;
+    background-color: #070707;
+
+}
+
+.docInnerSection h1
+{
+    font-family: "Raleway", sans-serif;
+    letter-spacing: 5px;
+    font-size: 32px;
+    text-align: center;
+    color: rgb(0, 123, 255);
+    margin: 30px;
+}
+.docInnerSection p
+{
+    margin: 30px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-family: "Raleway", sans-serif;
+    text-align: center;
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+}
+.docInnerSection img
+{
+    width: 40vw;
+    border-radius: 5px;
+    border-color: rgb(0, 136, 255);
+    border-style: solid;
+    border-width: 2px;
+    box-shadow: 0px 0px 10px rgb(0, 68, 255);
+}
+.docInnerInnerSection
+{
+    display: grid;
+    padding: 20px;
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    place-items: center;
+    background-color: #040710;
+    border-style: solid;
+    border-color: rgb(0, 238, 255);
+    border-width: 2px;
+    box-shadow: 0px 0px 5px #0095ff;
+
+}
+.btn{
+  position: sticky;
+  top: 65px;
+  float: right;
+  right: 20px;
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  background: rgb(0, 123, 255);
+  border-radius: 3px;
+  cursor: pointer;
+  z-index: 5;
+  transition: .4s ease-in-out
+}
+.btn.click{
+  right: 325px;
+  transition: .25s ease-in-out
+}
+.btn span{
+  color: white;
+  font-size: 28px;
+  line-height: 45px;
+}
+.btn.click span:before{
+  content: '\f00d';
+}
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.sidebar{
+    top: -5px;
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    right: -350px;
+    background: #13141b;
+    transition: right 0.4s ease;
+    z-index: 5;
+}
+.sidebar.show{
+  right: 0px;
+}
+.sidebar .text{
+  color: rgb(101, 193, 255);
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 65px;
+  text-align: center;
+  background: #101010;
+  letter-spacing: 1px;
+}
+.sidebar ul {
+    background: #101010;
+    height: 100%;
+    width: 100%;
+    list-style: none;
+  }
+  
+  .sidebar ul li {
+    line-height: 60px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+  }
+  
+  .sidebar ul li:last-child {
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+  }
+  
+  .sidebar ul li a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding-left: 40px;
+    font-weight: 500;
+    display: block;
+    width: 100%;
+    border-left: 3px solid transparent;
+  }
+  
+  .sidebar ul li.active a {
+    color: #62bdff;
+    background: #0d0d0d;
+    border-left-color: #e641a7;
+  }
+  
+  .sidebar ul li a:hover {
+    background: #1083ff;
+    color: #ffffff;
+  }
+  
+  .sidebar ul ul {
+    position: static;
+    display: none;
+  }
+  
+  .sidebar ul .rgd-show.show,
+  .sidebar ul .rgd2-show.show,
+  .sidebar ul .rgd3-show.show,
+  .sidebar ul .rgd4-show.show,
+  .sidebar ul .rgd5-show.show,
+  .sidebar ul .unityDocs-show.show1,
+  .sidebar ul .unityDocs2-show.show1,
+  .sidebar ul .unityDocs3-show.show1,
+  .sidebar ul .unityDocs4-show.show1,
+  .sidebar ul .unityDocs5-show.show1,
+  .sidebar ul .unityDocs6-show.show1,
+  .sidebar ul .unityBasics-show.show2,
+  .sidebar ul .unityBasics2-show.show2,
+  .sidebar ul .unityBasics3-show.show2,
+  .sidebar ul .unityBasics4-show.show2,
+  .sidebar ul .unityBasics5-show.show2,
+  .sidebar ul .unityBasics6-show.show2,
+  .sidebar ul .unityBasics7-show.show2,
+  .sidebar ul .unityBasics8-show.show2 {
+    display: block;
+  }
+  
+  .sidebar ul ul li {
+    line-height: 42px;
+    border-top: none;
+  }
+  
+  .sidebar ul ul li a {
+    font-size: 17px;
+    color: #e6e6e6;
+    padding-left: 80px;
+  }
+  
+  .sidebar ul ul li ul li a {
+    font-size: 17px;
+    color: #e6e6e6;
+    padding-left: 120px;
+  }
+  
+  .sidebar ul li.active ul li a {
+    color: #e6e6e6;
+    background: #101010;
+    border-left-color: transparent;
+  }
+  
+  .sidebar ul ul li a:hover {
+    color: #ffffff!important;
+    background: #007bff!important;
+  }
+  
+  .sidebar ul li a span {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 22px;
+    transition: transform 0.4s;
+  }
+  
+  .sidebar ul li a span.rotate {
+    transform: translateY(-50%) rotate(-180deg);
+  }
+.content{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: #202020;
+  z-index: -1;
+  text-align: center;
+}
+.content .header{
+  font-size: 45px;
+  font-weight: 600;
+}
+.content p{
+  font-size: 30px;
+  font-weight: 500;
+}
+
+
+.docsnavbar-scrollable {
+    /* Set a fixed height for the scrollable container */
+    max-height: 100vh; /* Adjust this value as needed */
+    /* Enable vertical scrolling for the container when its content overflows */
+    overflow-y: auto;
+}
+
+.docsnavbar-scrollable::-webkit-scrollbar
+{
+    width: 0.75rem;
+}
+.docsnavbar-scrollable::-webkit-scrollbar-track
+{
+    background: #1e1e24;
+}
+.docsnavbar-scrollable::-webkit-scrollbar-thumb
+{
+    background: #006eff;
+    border-radius: 20px;
+}

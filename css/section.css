@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Konkhmer+Sleokchher&family=Open+Sans:wght@300&family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Bree+Serif&family=Konkhmer+Sleokchher&family=Lilita+One&family=Open+Sans:wght@300&family=Titan+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+.rgdSection
+{
+    background-image: linear-gradient(to bottom right, rgb(255, 34, 52), rgb(22, 22, 22));
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    flex: auto;
+    font-weight: 400;
+    font-size: 16px;
+}
+.rgdSection#black
+{
+    background-image: linear-gradient(to bottom right, rgb(34, 34, 34), rgb(0, 0, 0));
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    flex: auto;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+}
+.rgdSection#sideTab
+{
+    background-image: radial-gradient(rgb(69, 38, 72), rgb(7, 10, 43));
+    margin-top: 0;
+    padding: 0;
+    box-sizing: border-box;
+    flex: auto;
+    font-weight: 400;
+    font-size: 16px;
+    overflow: hidden;
+}
+
+.rgdSectionContainer#AboutUs
+{
+    margin: auto;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 60px black;
+    position: relative;
+    width: 75%;
+    overflow: hidden;
+    background: linear-gradient(to bottom right, rgb(54, 54, 54), rgb(0, 0, 0));
+    border-radius: 20px;
+    border-color: rgb(0, 0, 0);
+    border-style: solid;
+    height: 750px;
+    transition: .75s;
+    text-align: center;
+
+    scale: .75;
+}
+.rgdSectionContainerHeader
+{
+    margin: 100px 50px 0px;
+    overflow: hidden;
+    background-color: black;
+    text-align: center;
+    position: relative;
+    transition: .5s;
+
+    background: linear-gradient(to bottom right, rgb(80, 80, 80), rgb(33, 33, 33));
+    border-radius: 20px;
+    box-shadow: 0px 0px 60px black;
+    height: 200px;
+    
+}
+.rgdSectionContainerHeader h1
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+
+    font-weight: 400;
+    text-transform: Uppercase;
+    text-shadow: 10px 10px 10px rgba(0,0,0,.5);
+    -webkit-text-stroke: 3px rgb(0, 0, 0);
+    text-align: center;
+    font-family: "Bree Serif", sans-serif;
+    /*--{Scaling Font Size Formula: }--
+    /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
+    font-size: calc(14px + (84 - 14) * ((100vw - 300px) / (1600 - 300)));
+    letter-spacing: 5px;
+    color: rgb(0, 153, 255);
+
+
+
+
+}
+.rgdSectionContainer#AboutUs p
+{
+    padding-top: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: calc(14px + (32 - 14) * ((100vw - 300px) / (1600 - 300)));
+    font-family: "Young Serif", sans-serif;
+
+}
+.rgdSectionAlt:root
+{
+    --main-backdrop: rgb(255, 255, 255);
+}
+.rgdSectionAlt
+{
+    background-color: var(--main-backdrop);
+    padding: 5px;
+    box-sizing: border-box;
+    flex: auto;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 30px;
+}
+.headerType 
+{
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+}
+.headerType-one 
+{
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: black;
+    text-align: center;
+    height: 500px;
+    position: relative;
+    transition: .75s;
+}
+  .headerType-one span{
+    
+    /*--{Center Text}--*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+
+    text-align: center;
+    font-family: "Black Ops One", sans-serif;
+    /*--{Scaling Font Size Formula: }--
+    /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
+    font-size: calc(14px + (84 - 14) * ((100vw - 300px) / (1600 - 300)));
+    letter-spacing: 5px;
+    color: white;
+
+    -webkit-box-reflect: below -25px linear-gradient(transparent, #0002);
+
+    animation-name: ExpandLetterTitle;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier();
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+    transition: 1s;
+  }
+@keyframes ExpandLetterTitle
+{
+    0%{letter-spacing: 5px;}
+    50%{letter-spacing: 15px;}
+    100%{letter-spacing: 5px;}
+}
+@media only screen and (max-device-width: 1366px) {
+    .example {
+        background-attachment: scroll;
+   }
+}
+/*
+===========================================================================
+Headers: 
+===========================================================================
+*/
+hr {
+    padding-top: 0;
+    padding-bottom: 0;
+    background: black;
+    font-family: Megrim, cursive;
+    font-size: 35px;
+    height: 2px;
+    background: FadeRedColor;
+    animation-name: FadeRedColor;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    border: none;
+    margin: 2em 2em 2em;
+    position: relative;
+    
+    &::before {
+    
+        content: attr(data-symbol);
+
+        position: absolute;
+        display: block;
+
+        top: 0;
+        left: 50%;
+        background: rgb(18, 18, 18);
+        color: white;
+        padding: .2em 3em;
+        transform: translate(-50%, -50%);
+
+
+    }
+}
+hr#four 
+{
+    &:before {
+        -webkit-box-reflect: below 2px linear-gradient(transparent 33.33%, #0004);
+    border: 2px;
+    border-style: solid;
+    border-color: FadeWhiteColor;
+    animation-name: FadeWhiteColor;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    }
+    
+}

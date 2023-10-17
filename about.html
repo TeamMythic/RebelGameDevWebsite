@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<header>
+	<title>RGD - About</title>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-EU-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale= 1">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="css/MythicLibrarys/MythicsNavbar.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Konkhmer+Sleokchher&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@100;400;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/MythicLibrarys/WaveSection.css">
+    <link rel="stylesheet" href="css/MythicLibrarys/MythicsButtonSet1.css">
+    <link rel="stylesheet" href="css/MythicLibrarys/MythicFooter.css">
+</header>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+    .titleSection h1
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: fit-content;
+        height: fit-content;
+
+        font-family: "Konkhmer Sleokchher", serif;
+        color: white;
+        /*--{Scaling Font Size Formula: }--
+        /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
+        font-size: calc(14px + (84 - 14) * ((100vw - 300px) / (1600 - 300)));
+        letter-spacing: 5px;
+        text-transform: Uppercase;
+        text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.67);
+        -webkit-text-stroke: calc(1px + (2 - 1) * ((100vw - 300px) / (1600 - 300))) rgb(0, 0, 0);
+        overflow-x: visible;
+    }
+    h1
+    {
+        margin-top: auto;
+        margin-bottom: auto;
+        font-family: "Konkhmer Sleokchher", serif;
+        color: white;
+        /*--{Scaling Font Size Formula: }--
+        /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
+        font-size: calc(14px + (84 - 14) * ((100vw - 300px) / (1600 - 300)));
+        letter-spacing: 5px;
+        text-shadow: 10px 10px 10px rgba(0,0,0,.5);
+        -webkit-text-stroke: calc(1px + (2 - 1) * ((100vw - 300px) / (1600 - 300))) rgb(0, 0, 0);
+        overflow-x: visible;
+    }
+    .contentHolder a
+    {
+        text-decoration: none;
+        -webkit-text-stroke: 0;
+        text-shadow: none;
+        color: red;
+        text-align: left;
+    }
+    p
+    {
+        padding-left: 25px;
+        padding-right: 25px;
+        text-align: center;
+        color: rgb(255, 255, 255);
+        font-size: calc(14px + (32 - 14) * ((100vw - 300px) / (1600 - 300)));
+        font-family: "Young Serif", sans-serif;
+        text-shadow: 10px 10px 10px rgba(0,0,0,.5);
+        -webkit-text-stroke: 0px rgb(0, 0, 0);
+    }
+    .titleSection
+    {
+        box-shadow: 0px 0px 30px black;
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        background: linear-gradient(to bottom right, #6e77f4, #35c0e6);
+        border-radius: 50px;
+        border-color: rgb(249, 249, 249);
+        border-style: solid;
+        height: 12.5vh;
+        transition: .75s;
+        text-align: center;
+
+        animation: forwards;
+        animation-duration: .75s;
+        animation-name: IntroTitle;
+        animation-iteration-count: 1;
+
+        transition: .5s;
+    }
+
+    .scalingText
+    {
+        position: relative;
+        padding: 0px;
+        margin: 0 auto;
+        /* animation-name: Scaler;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        animation-duration: 5s; */
+    }
+
+.TextHeader 
+{
+  text-transform: uppercase;
+  letter-spacing: .5em;
+  display: inline-block;
+  border: 4px double rgba(255, 255, 255, 0.25);
+  border-width: 4px 0;
+  text-align: center; /* Center the text */
+  padding: 1.5em 0em;
+  position: relative;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  width: 100%;
+  overflow: visible;
+
+}
+.TextHeader p
+{
+    overflow: visible;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    font-family: "Young Serif", sans-serif;
+    text-shadow: 10px 10px 10px rgba(0,0,0,.5);
+    -webkit-text-stroke: 0px rgb(0, 0, 0);
+}
+.TextHeader p span 
+{
+    text-align: center;
+  font: 700 3em/1 "Oswald", sans-serif;
+  letter-spacing: 0;
+  padding: 0.25em 0 0.325em;
+  display: block;
+
+  margin: -50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  
+  
+  text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
+  /* Clip Background Image */
+  background: url(Images/graphics/Scrollers/scroll1blue.png) repeat-y;
+  -webkit-background-clip: text;
+  background-clip: text;
+  /* Animate Background Image */
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: aitf 80s linear infinite;
+  animation: aitf 80s linear infinite;
+  /* Activate hardware acceleration for smoother animations */
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+
+}
+.TextHeader p span#red
+{
+    background: url(Images/graphics/Scrollers/scroll1red.png) repeat-y;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+.TextHeader p span#green
+{
+    background: url(Images/graphics/Scrollers/scroll1green.png) repeat-y;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+.TextHeader p span#orange
+{
+    background: url(Images/graphics/Scrollers/scroll1orange.png) repeat-y;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+/* Animate Background Image */
+@-webkit-keyframes aitf 
+{
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Animate Background Image */
+
+@keyframes aitf {
+	0% { background-position: 0% 50%; }
+	100% { background-position: 100% 50%; }
+}
+
+@media only screen and (max-width: 520px) 
+{
+    .mythicsButton#one a
+    {
+        width: 50vw;
+        line-height: 40px;
+    }
+    .mythicsButton#one a:hover 
+    {
+        width: 50vw;
+    }
+    .mythicsButton#one a:active
+    {
+        width: 50vw;
+    }
+    .titleSection
+    {
+        width: 120%;
+        height: 6.5vh;
+    }
+    .TextHeader p
+    {
+        
+        font-size: 16px;
+        letter-spacing: 0em;
+    }
+    .TextHeader p span
+    {
+        font-size: 36px;
+    }
+}
+</style>
+<body>
+    <nav class="navbar">
+        <ul class="navbar-nav">
+            <li class="logo">
+                <a href="#" class="nav-link">
+                    <span class="link-text">Rebel Game Devs</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/></svg>                    
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M14 2.2C22.5-1.7 32.5-.3 39.6 5.8L80 40.4 120.4 5.8c9-7.7 22.3-7.7 31.2 0L192 40.4 232.4 5.8c9-7.7 22.3-7.7 31.2 0L304 40.4 344.4 5.8c7.1-6.1 17.1-7.5 25.6-3.6s14 12.4 14 21.8V488c0 9.4-5.5 17.9-14 21.8s-18.5 2.5-25.6-3.6L304 471.6l-40.4 34.6c-9 7.7-22.3 7.7-31.2 0L192 471.6l-40.4 34.6c-9 7.7-22.3 7.7-31.2 0L80 471.6 39.6 506.2c-7.1 6.1-17.1 7.5-25.6 3.6S0 497.4 0 488V24C0 14.6 5.5 6.1 14 2.2zM96 144c-8.8 0-16 7.2-16 16s7.2 16 16 16H288c8.8 0 16-7.2 16-16s-7.2-16-16-16H96zM80 352c0 8.8 7.2 16 16 16H288c8.8 0 16-7.2 16-16s-7.2-16-16-16H96c-8.8 0-16 7.2-16 16zM96 240c-8.8 0-16 7.2-16 16s7.2 16 16 16H288c8.8 0 16-7.2 16-16s-7.2-16-16-16H96z"/></svg>
+                    <span class="link-text">Documentation</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M144 0a80 80 0 1 1 0 160A80 80 0 1 1 144 0zM512 0a80 80 0 1 1 0 160A80 80 0 1 1 512 0zM0 298.7C0 239.8 47.8 192 106.7 192h42.7c15.9 0 31 3.5 44.6 9.7c-1.3 7.2-1.9 14.7-1.9 22.3c0 38.2 16.8 72.5 43.3 96c-.2 0-.4 0-.7 0H21.3C9.6 320 0 310.4 0 298.7zM405.3 320c-.2 0-.4 0-.7 0c26.6-23.5 43.3-57.8 43.3-96c0-7.6-.7-15-1.9-22.3c13.6-6.3 28.7-9.7 44.6-9.7h42.7C592.2 192 640 239.8 640 298.7c0 11.8-9.6 21.3-21.3 21.3H405.3zM224 224a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zM128 485.3C128 411.7 187.7 352 261.3 352H378.7C452.3 352 512 411.7 512 485.3c0 14.7-11.9 26.7-26.7 26.7H154.7c-14.7 0-26.7-11.9-26.7-26.7z"/></svg>                    
+                    <span class="link-text">Officers</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M243.583 91.6027L323.695 138.384C326.575 140.026 326.68 144.583 323.695 146.225L228.503 201.854C225.623 203.55 222.22 203.444 219.549 201.854L124.357 146.225C121.425 144.636 121.373 139.973 124.357 138.384L204.417 91.6027V0L0 119.417V358.252L78.3843 312.477V218.914C78.3319 215.576 82.2066 213.192 85.0865 214.993L180.279 270.622C183.159 272.318 184.782 275.338 184.782 278.464V389.669C184.834 393.007 180.959 395.391 178.079 393.589L97.9673 346.808L19.583 392.583L224 512L428.417 392.583L350.033 346.808L269.921 393.589C267.093 395.338 263.114 393.06 263.218 389.669V278.464C263.218 275.126 265.051 272.159 267.721 270.622L362.914 214.993C365.741 213.245 369.72 215.47 369.616 218.914V312.477L448 358.252V119.417L243.583 0V91.6027Z"/></svg>
+                    <span class="link-text">Open Source Project</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M0 128C0 92.7 28.7 64 64 64H320c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128zM559.1 99.8c10.4 5.6 16.9 16.4 16.9 28.2V384c0 11.8-6.5 22.6-16.9 28.2s-23 5-32.9-1.6l-96-64L416 337.1V320 192 174.9l14.2-9.5 96-64c9.8-6.5 22.4-7.2 32.9-1.6z"/></svg>
+                    <span class="link-text">Rebel Game Dev Videos</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M96 0C60.7 0 32 28.7 32 64V448c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H96zM208 288h64c44.2 0 80 35.8 80 80c0 8.8-7.2 16-16 16H144c-8.8 0-16-7.2-16-16c0-44.2 35.8-80 80-80zm-32-96a64 64 0 1 1 128 0 64 64 0 1 1 -128 0zM512 80c0-8.8-7.2-16-16-16s-16 7.2-16 16v64c0 8.8 7.2 16 16 16s16-7.2 16-16V80zM496 192c-8.8 0-16 7.2-16 16v64c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16zm16 144c0-8.8-7.2-16-16-16s-16 7.2-16 16v64c0 8.8 7.2 16 16 16s16-7.2 16-16V336z"/></svg>
+                    <span class="link-text">Contact</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="index.html" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/></svg>                    
+                    <span class="link-text">Home</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <section class="blue">
+            <br><br><br>
+            <br><br><br>
+            <div class="titleSection">
+                <h1>About Section</h1>
+            </div>
+            <div class="scalingText">
+                <p>
+                    Scroll down to read about the rebel game devs club
+                </p>
+            </div>
+            <div class="mythicsButtonContainer">
+                <div id="one"class="mythicsButton" 
+                style="--borderRadius: 30px; 
+                       --initialSize: 40vw;
+                       --hoverSize: 35vw;
+                       --clickedSize: 28vw;
+                       --borderColor:#fff;
+                       --initialButtonColor: #262626;
+                       --hoverButtonColor: #2273ff;
+                       --clickedButtonColor: #fff;
+                       --hoverFontColor: #fff;
+                       --clickedFontColor: #000000;
+                       --initialLineSpacing: 2px;
+                       --hoverLineSpacing: 3px;
+                       --clickedLineSpacing: 2px;
+                       --initialFontSize: calc(8px + (32 - 8) * ((100vw - 300px) / (1600 - 300)));;
+                       --hoverFontSize: calc(8px + (24 - 8) * ((100vw - 300px) / (1600 - 300)));;
+                       --clickedFontSize: calc(8px + (16 - 8) * ((100vw - 300px) / (1600 - 300)));;
+                       
+                       ">
+                    <a href="#Start-Reading">
+                        Scroll Down To Read
+                    </a>
+                </div> 
+            </div>
+        </section>
+        
+        <div class="spacer layer1"></div>
+        <section class="grey">
+            <section id="Start-Reading"></section>
+            <div class="TextHeader">
+                <p>
+                    Rebel Game Devs
+                    <span>
+                    About
+                    </span>
+                    <!-- Add dash effect "&mdash;" -->
+                        We the Rebel Game Devs club strive to teach everyone at any level how to create games. It does
+                        not matter if you are a programmer, graphics designer, musician, writter, game tester, etc. as 
+                        everyone is welcome!
+                  </p>
+            </div>
+
+            </div>
+            
+            </section>
+        <div class="spacer layer2"></div>
+        <section class="blue">
+            <section id="History"></section>
+                
+            </section>
+        </section>
+        <div class="spacer layer1"></div>
+        <section class="grey">
+               
+            <div class="TextHeader">
+                <p>
+                    <span id="orange">
+                    Get Involved Today
+                    </span>
+                    &mdash;  &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash;
+                </p>
+                <p>
+                    Join The Open Source Project Today!
+                </p>
+                <p>
+                    &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash;
+                </p>
+            </div>
+
+
+            </section>
+        <div class="spacer layer2"></div>
+        <section class="blue">
+        </section>
+        <footer>
+            <p>&copy rebelgamedevs.org | is powered by Brandon Bird (Mythic)</p>
+            <p>Should you have any questions or concerns regarding the website please contact me</p>
+            <p>+1 (702) - 857 - 1869 | mythicgaming234@gmail.com</p>
+            <p></p>
+
+        </footer>
+    </main>
+</body>
+<script>
+    function smoothScroll(target, duration) 
+    {
+        var target = document.querySelector(target);
+        var targetPosition = target.getBoundingClientRect().top;
+        var startPosition = window.pageYOffset;
+        var distance = targetPosition - startPosition;
+        var startTime = null;
+
+        function animation(currentTime) {
+            if (startTime === null) startTime = currentTime;
+            var timeElapsed = currentTime - startTime;
+            var run = easing(timeElapsed, startPosition, distance, duration);
+            window.scrollTo(0, run);
+            if (timeElapsed < duration) requestAnimationFrame(animation);
+        }
+
+        function easing(t, b, c, d) {
+            t /= d / 2;
+            if (t < 1) return c / 2 *t * t + b;
+            t--;
+            return -c / 2 * (t * (t - 2) - 1) + b;
+        }
+
+        requestAnimationFrame(animation);
+    }
+
+    var goTo = document.querySelector('#Start-Reading');
+    var goToLink = document.querySelector('a[href="#Start-Reading"]');
+
+    goToLink.addEventListener('click', function() {
+        smoothScroll('#Start-Reading', 1000);
+    });
+</script>
+
+</html>
