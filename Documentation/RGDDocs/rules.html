@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <!-- --{Global CSS}-- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/><!-- --{Used For Icon Change in RGD docs button}-- -->
+    
+    <!-- --{Global Script Helpers}-- -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <!-- --{Google Fonts}-- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Konkhmer+Sleokchher&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    
+    <!-- --{Personal CSS}-- -->
+    <link rel="stylesheet" href="../MythicsNavbarDocumentation.css">
+    <link rel="stylesheet" href="documentation.css">
+</header>
+<style>
+    /*
+    =======================================================
+    NOTE: I could not find a way to change the location with
+    <div class="name" style = "">; instead a change is to
+    add a identifier id and just change the background url
+    for each html file that has a different folder location.
+    =======================================================
+    */
+    .docTextHeader p span#one
+    {
+        text-align: center;
+        font: 700 3em/1 "Oswald", sans-serif;
+        letter-spacing: 0;
+        padding: 0.25em 0 0.325em;
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
+        /* Clip Background Image */
+        background: url(../../Images/graphics/Scrollers/scroll1blue.png) repeat-y;
+        -webkit-background-clip: text;
+        background-clip: text;
+        /* Animate Background Image */
+        -webkit-text-fill-color: transparent;
+        -webkit-animation: aitf 80s linear infinite;
+        animation: aitf 80s linear infinite;
+        /* Activate hardware acceleration for smoother animations */
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        -webkit-backface-visibility: visible;
+        backface-visibility: visible;
+    }
+</style>
+<body>
+    <!-- --{Left Navbar}-- -->
+    <nav class="navbar">
+        <ul class="navbar-nav">
+            <li class="logo">
+                <a href="#" class="nav-link">
+                    <span class="link-text">Rebel Game Devs</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/></svg>                    
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><path d="M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H512c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zm80 256h64c44.2 0 80 35.8 80 80c0 8.8-7.2 16-16 16H80c-8.8 0-16-7.2-16-16c0-44.2 35.8-80 80-80zm-32-96a64 64 0 1 1 128 0 64 64 0 1 1 -128 0zm256-32H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64H496c8.8 0 16 7.2 16 16s-7.2 16-16 16H368c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/></svg>
+                    <span class="link-text">About</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 640 512"><path d="M144 0a80 80 0 1 1 0 160A80 80 0 1 1 144 0zM512 0a80 80 0 1 1 0 160A80 80 0 1 1 512 0zM0 298.7C0 239.8 47.8 192 106.7 192h42.7c15.9 0 31 3.5 44.6 9.7c-1.3 7.2-1.9 14.7-1.9 22.3c0 38.2 16.8 72.5 43.3 96c-.2 0-.4 0-.7 0H21.3C9.6 320 0 310.4 0 298.7zM405.3 320c-.2 0-.4 0-.7 0c26.6-23.5 43.3-57.8 43.3-96c0-7.6-.7-15-1.9-22.3c13.6-6.3 28.7-9.7 44.6-9.7h42.7C592.2 192 640 239.8 640 298.7c0 11.8-9.6 21.3-21.3 21.3H405.3zM224 224a96 96 0 1 1 192 0 96 96 0 1 1 -192 0zM128 485.3C128 411.7 187.7 352 261.3 352H378.7C452.3 352 512 411.7 512 485.3c0 14.7-11.9 26.7-26.7 26.7H154.7c-14.7 0-26.7-11.9-26.7-26.7z"/></svg>                    
+                    <span class="link-text">Officers</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M243.583 91.6027L323.695 138.384C326.575 140.026 326.68 144.583 323.695 146.225L228.503 201.854C225.623 203.55 222.22 203.444 219.549 201.854L124.357 146.225C121.425 144.636 121.373 139.973 124.357 138.384L204.417 91.6027V0L0 119.417V358.252L78.3843 312.477V218.914C78.3319 215.576 82.2066 213.192 85.0865 214.993L180.279 270.622C183.159 272.318 184.782 275.338 184.782 278.464V389.669C184.834 393.007 180.959 395.391 178.079 393.589L97.9673 346.808L19.583 392.583L224 512L428.417 392.583L350.033 346.808L269.921 393.589C267.093 395.338 263.114 393.06 263.218 389.669V278.464C263.218 275.126 265.051 272.159 267.721 270.622L362.914 214.993C365.741 213.245 369.72 215.47 369.616 218.914V312.477L448 358.252V119.417L243.583 0V91.6027Z"/></svg>
+                    <span class="link-text">Open Source Project</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><path d="M0 128C0 92.7 28.7 64 64 64H320c35.3 0 64 28.7 64 64V384c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V128zM559.1 99.8c10.4 5.6 16.9 16.4 16.9 28.2V384c0 11.8-6.5 22.6-16.9 28.2s-23 5-32.9-1.6l-96-64L416 337.1V320 192 174.9l14.2-9.5 96-64c9.8-6.5 22.4-7.2 32.9-1.6z"/></svg>
+                    <span class="link-text">Rebel Game Dev Videos</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><path d="M96 0C60.7 0 32 28.7 32 64V448c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H96zM208 288h64c44.2 0 80 35.8 80 80c0 8.8-7.2 16-16 16H144c-8.8 0-16-7.2-16-16c0-44.2 35.8-80 80-80zm-32-96a64 64 0 1 1 128 0 64 64 0 1 1 -128 0zM512 80c0-8.8-7.2-16-16-16s-16 7.2-16 16v64c0 8.8 7.2 16 16 16s16-7.2 16-16V80zM496 192c-8.8 0-16 7.2-16 16v64c0 8.8 7.2 16 16 16s16-7.2 16-16V208c0-8.8-7.2-16-16-16zm16 144c0-8.8-7.2-16-16-16s-16 7.2-16 16v64c0 8.8 7.2 16 16 16s16-7.2 16-16V336z"/></svg>
+                    <span class="link-text">Contact</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="index.html" class="nav-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512"><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/></svg>                    
+                    <span class="link-text">Home</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- --{Right Docs Navbar}-- -->
+    <div class="btn">
+        <span class="fas fa-bars"></span>
+     </div>
+    <nav class="sidebar">
+        <div class="docsnavbar-scrollable">
+            <div class="text">
+               Rebel Geme Devs
+            </div>
+            <ul>
+               <li>
+                   <a href="#stay" class="rgd-btn">Rebel Game Dev Docs</a>
+                   <ul class="rgd-show">
+                       <li>
+                           <a href="#stay" class="rgd2-btn">How To Use</a>
+                           <ul class="rgd2-show">
+                               <li><a href="RGDDocs/GettingStarted.html">Getting Started</a></li>
+                               <li><a href="#">Rules</a></li>
+                               <li><a href="#">Social</a></li>
+                               <li><a href="#">File Storage</a></li>
+                           </ul>
+                       </li>
+                     <li>
+                        <a href="#stay" class="rgd3-btn">RGD Core</a>
+                        <ul class="rgd3-show">
+                            <li><a href="#">RGD Functionality</a></li>
+                            <li><a href="#">Learning Scenes</a></li>
+                            <li><a href="#">ExtentionMethods</a></li>
+                            <li><a href="#">Utility Components</a></li>
+                            <li><a href="#">Resources</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#stay" class="rgd4-btn">The Main JRPG Project</a>
+                        <ul class="rgd4-show">
+                            <li><a href="#">Pilot</a></li>
+                            <li><a href="#">Worlds</a></li>
+                            <li><a href="#">Collaboration</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#stay" class="rgd5-btn">Community Projects</a>
+                        <ul class="rgd5-show">
+                            <li><a href="#">How To</a></li>
+                            <li><a href="#">How To Post On The Hub</a></li>
+                            <li><a href="#">Collaborate</a></li>
+                        </ul>
+                    </li>
+                   </ul>
+                </li>
+                <li>
+                    <a href="#stay" class="unityDocs-btn">Unity Docs</a>
+                    <ul class="unityDocs-show">
+                        <li>
+                            <a href="#stay" class="unityDocs2-btn">Physics</a>
+                            <ul class="unityDocs2-show">
+                                <li><a href="#">How To Use</a></li>
+                                <li><a href="#">Rigidbody</a></li>
+                                <li><a href="#">Collision</a></li>
+                                <li><a href="#">Physics Cast</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#stay" class="unityDocs3-btn">Editor</a>
+                            <ul class="unityDocs3-show">
+                                <li><a href="#">How To Use</a></li>
+                                <li><a href="#">Custom Inspectors</a></li>
+                                <li><a href="#">Gizmos</a></li>
+                                <li><a href="#">Execute Modes</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#stay" class="unityDocs4-btn">User Interface</a>
+                            <ul class="unityDocs4-show">
+                                <li><a href="#">How To Use</a></li>
+                                <li><a href="#">Common Components</a></li>
+                                <li><a href="#">3D World Components</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#stay" class="unityDocs5-btn">Rendering</a>
+                            <ul class="unityDocs5-show">
+                                <li><a href="#">Unity's Pipelines</a></li>
+                                <li><a href="#">Volumes</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#stay" class="unityDocs6-btn">Scriptable Objects</a>
+                            <ul class="unityDocs6-show">
+                                <li><a href="#">How To Use</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                   <a href="#stay" class="unityBasics-btn">Unity C# Basics
+                   </a>
+                   <ul class="unityBasics-show">
+                        <li>
+                            <a href="#stay" class="unityBasics2-btn">Variables and Methods</a>
+                            <ul class="unityBasics2-show">
+                                <li><a href="#">Generic DataTypes</a></li>
+                                <li><a href="#">Unitys Datatypes</a></li>
+                                <li><a href="#">String Interpolation</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#stay" class="unityBasics3-btn">Advanced DataTypes</a>
+                            <ul class="unityBasics3-show">
+                                <li><a href="#">Newer C# DataTypes</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"stay class="unityBasics4-btn">Static Methods</a>
+                            <ul class="unityBasics4-show">
+                                <li><a href="#">How To Use</a></li>
+                                <li><a href="#">Statics vs. Singletons</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#stay" class="unityBasics5-btn">Delegates</a>
+                            <ul class="unityBasics5-show">
+                                <li><a href="#">Single Delegates</a></li>
+                                <li><a href="#">Multi Delegates</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#stay" class="unityBasics6-btn">Lambdas</a>
+                            <ul class="unityBasics6-show">
+                                <li><a href="#">Boolean Lambdas</a></li>
+                                <li><a href="#">Method Lambdas</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#stay" class="unityBasics7-btn">Interfaces</a>
+                            <ul class="unityBasics7-show">
+                                <li><a href="#">How To Use</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#stay" class="unityBasics8-btn">Inheritance</a>
+                            <ul class="unityBasics8-show">
+                                <li><a href="#">What is Inheritance</a></li>
+                                <li><a href="#">Types Of Inheritance</a></li>
+                            </ul>
+                        </li>
+                   </ul>
+            </ul>
+        </div>
+      </nav> 
+
+      <!-- --{main is shifted by 5 rem to be to the right of the left navbar}-- -->
+    <main>
+        <!-- --{Title}-- -->
+        <div class="docTextHeader">
+            <p>
+                <span id="one">
+                Documentation
+                </span>
+                &mdash;  &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash;
+            </p>
+            <p>
+                Powered By Unity!
+            </p>
+            <p>
+                &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash; &mdash;
+            </p>
+        </div>
+        
+        <!-- --{Start If Documentation}-- -->
+        <div class="docSection">
+            <h1 id="one"><span>Open Source Project Framework Rules</span></h1>
+            <p>
+                If you notice your github changes/additions are not added to the branch it's likely you did not follow the rules. 
+                Please feel free to contact us if you are having trouble.
+            </p>
+            <div class="docInnerSection">
+                <div class="docInnerInnerSection">
+                   <h1>Rule 1:</h1>
+                   <p>
+                    <span id="style1">&#8614</span> 
+                    No harassment or bullying. Any kind of harrassment will involve immediate whitelist from the project. You can appeal by messaging
+                    one of the Rebel Game Dev Officers.
+                   </p>
+
+                   <h1>Rule 2:</h1>
+                   <p>
+                    <span id="style1">&#8614</span> 
+                    You are to only upload to the dev branch. If this rule is not followed your push/merge to the branch will be denied.
+                   </p>
+
+                   <h1>Rule 3:</h1>
+                   <p>
+                    <span id="style1">&#8614</span> 
+                    Follow the "Asset File Storage Guidelines". You can find information about <a href="#">file storage here</a>. Not following this
+                    may result in your push/merge to the branch being denied.
+                   </p>
+                   <h1>Rule 4:</h1>
+                   <p>
+                    <span id="style1">&#8614</span> 
+                    Explicit or vulgar content is strictly prohibited and will result in an immediate whitelist from the project. You can appeal by messaging
+                    one of the Rebel Game Dev Officers.
+                   <h1>Rule 5:</h1>
+                   <p>
+                    <span id="style1">&#8614</span> 
+                    We operate under a Open Source License, specifically the MIT open source license. We are giving you explicit freedom to do what you like with the content posted here. This also
+                    means anything you post on here loses all copyright rights. We still want to maintane a structure of ownership. So please always comment
+                    your scripts, scenes, etc. with your nicname/name. If you would like to check the license please go to the repository as show below.
+                   </p>
+                   <img src="Images/HowToUse/IMG6.png" alt="img6">
+                </div>
+           
+            </div>
+        </div>
+    </main>
+    
+</body>
+<script>
+    //Rebel Game Dev Docs:
+    //Note to self to add more inner sections I need to change the class type in the css to have the show and define a function drop down here:
+    $('.sidebar .rgd-btn').click(function () {
+      $('.sidebar .rgd-show').toggleClass("show");
+      $('.sidebar .first').toggleClass("rotate");
+    });
+    $('.sidebar .rgd2-btn').click(function () {
+      $('.sidebar .rgd2-show').toggleClass("show");
+      $('.sidebar .first').toggleClass("rotate");
+    });
+    $('.sidebar .rgd3-btn').click(function () {
+      $('.sidebar .rgd3-show').toggleClass("show");
+      $('.sidebar .first').toggleClass("rotate");
+    });
+    $('.sidebar .rgd4-btn').click(function () {
+      $('.sidebar .rgd4-show').toggleClass("show");
+      $('.sidebar .first').toggleClass("rotate");
+    });
+    $('.sidebar .rgd5-btn').click(function () {
+      $('.sidebar .rgd5-show').toggleClass("show");
+      $('.sidebar .first').toggleClass("rotate");
+    });
+
+    //Unity Docs:
+    $('.sidebar .unityDocs-btn').click(function () {
+      $('.sidebar .unityDocs-show').toggleClass("show1");
+      $('.sidebar .second').toggleClass("rotate");
+    });
+    $('.sidebar .unityDocs2-btn').click(function () {
+      $('.sidebar .unityDocs2-show').toggleClass("show1");
+      $('.sidebar .second').toggleClass("rotate");
+    });
+    $('.sidebar .unityDocs3-btn').click(function () {
+      $('.sidebar .unityDocs3-show').toggleClass("show1");
+      $('.sidebar .second').toggleClass("rotate");
+    });
+    $('.sidebar .unityDocs4-btn').click(function () {
+      $('.sidebar .unityDocs4-show').toggleClass("show1");
+      $('.sidebar .second').toggleClass("rotate");
+    });
+    $('.sidebar .unityDocs5-btn').click(function () {
+      $('.sidebar .unityDocs5-show').toggleClass("show1");
+      $('.sidebar .second').toggleClass("rotate");
+    });
+    $('.sidebar .unityDocs6-btn').click(function () {
+      $('.sidebar .unityDocs6-show').toggleClass("show1");
+      $('.sidebar .second').toggleClass("rotate");
+    });
+
+    //Unity Basics:
+    $('.sidebar .unityBasics-btn').click(function () {
+      $('.sidebar .unityBasics-show').toggleClass("show2");
+      $('.sidebar .second').toggleClass("rotate");
+    });
+    $('.sidebar .unityBasics2-btn').click(function () {
+      $('.sidebar .unityBasics2-show').toggleClass("show2");
+      $('.sidebar .second').toggleClass("rotate");
+    });
+    $('.sidebar .unityBasics3-btn').click(function () {
+      $('.sidebar .unityBasics3-show').toggleClass("show2");
+      $('.sidebar .second').toggleClass("rotate");
+    });
+    $('.sidebar .unityBasics4-btn').click(function () {
+      $('.sidebar .unityBasics4-show').toggleClass("show2");
+      $('.sidebar .second').toggleClass("rotate");
+    });
+    $('.sidebar .unityBasics5-btn').click(function () {
+      $('.sidebar .unityBasics5-show').toggleClass("show2");
+      $('.sidebar .second').toggleClass("rotate");
+    });
+    $('.sidebar .unityBasics6-btn').click(function () {
+      $('.sidebar .unityBasics6-show').toggleClass("show2");
+      $('.sidebar .second').toggleClass("rotate");
+    });
+    $('.sidebar .unityBasics7-btn').click(function () {
+      $('.sidebar .unityBasics7-show').toggleClass("show2");
+      $('.sidebar .second').toggleClass("rotate");
+    });
+    $('.sidebar .unityBasics8-btn').click(function () {
+      $('.sidebar .unityBasics8-show').toggleClass("show2");
+      $('.sidebar .second').toggleClass("rotate");
+    });
+
+    //Activator:
+    $('.sidebar ul li').click(function () {
+      $(this).addClass("active").siblings().removeClass("active");
+    });
+
+    //Show Nav Button:
+    $('.btn').click(function()
+    {
+           $(this).toggleClass("click");
+           $('.sidebar').toggleClass("show");
+         });
+  </script>
+</html>
