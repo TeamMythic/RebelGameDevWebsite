@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Konkhmer+Sleokchher&family=Open+Sans:wght@300&family=Titan+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Bree+Serif&family=Konkhmer+Sleokchher&family=Lilita+One&family=Open+Sans:wght@300&family=Titan+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+
+p {
+    font-family: "Open Sans", sans-serif; 
+}
+
 .rgdSection
 {
     background-image: linear-gradient(to bottom right, rgb(255, 34, 52), rgb(22, 22, 22));
@@ -84,7 +89,7 @@
     text-shadow: 10px 10px 10px rgba(0,0,0,.5);
     -webkit-text-stroke: 3px rgb(0, 0, 0);
     text-align: center;
-    font-family: "Bree Serif", sans-serif;
+    font-family: "Open Sans", sans-serif;
     /*--{Scaling Font Size Formula: }--
     /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
     font-size: calc(14px + (84 - 14) * ((100vw - 300px) / (1600 - 300)));
@@ -103,7 +108,7 @@
     text-align: center;
     color: rgb(255, 255, 255);
     font-size: calc(14px + (32 - 14) * ((100vw - 300px) / (1600 - 300)));
-    font-family: "Young Serif", sans-serif;
+    font-family: "Open Sans", sans-serif;
 
 }
 .rgdSectionAlt:root
@@ -150,7 +155,7 @@
     height: fit-content;
 
     text-align: center;
-    font-family: "Black Ops One", sans-serif;
+    font-family: "Open Sans", sans-serif;
     /*--{Scaling Font Size Formula: }--
     /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
     font-size: calc(14px + (84 - 14) * ((100vw - 300px) / (1600 - 300)));
@@ -187,15 +192,14 @@ hr {
     padding-top: 0;
     padding-bottom: 0;
     background: black;
-    font-family: Megrim, cursive;
+    font-family: "Open Sans", sans-serif;
     font-size: 35px;
-    height: 2px;
+    height: 2vw;
     background: FadeRedColor;
     animation-name: FadeRedColor;
     animation-duration: 5s;
     animation-iteration-count: infinite;
     border: none;
-    margin: 2em 2em 2em;
     position: relative;
     
     &::before {
@@ -219,12 +223,12 @@ hr#four
 {
     &:before {
         -webkit-box-reflect: below 2px linear-gradient(transparent 33.33%, #0004);
-    border: 2px;
-    border-style: solid;
-    border-color: FadeWhiteColor;
-    animation-name: FadeWhiteColor;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
+        border: 2px;
+        border-style: solid;
+        border-color: FadeWhiteColor;
+        animation-name: FadeWhiteColor;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;
     }
     
 }
