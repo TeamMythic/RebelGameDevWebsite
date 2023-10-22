@@ -1,10 +1,51 @@
-
+body
+{
+    color: black;
+    background-color: #15161c;
+    margin-top: 20px;
+    padding: 0;
+}
+/* Need this to click things or hover because of overlay nav*/
+.fixInteractables a
+{
+    position: relative;
+    z-index: 10;
+}
+.fixInteractables h1
+{
+    position: relative;
+    z-index: 10;
+}
+h1
+{
+    text-align: center;
+    color: hotpink;
+}
+body::-webkit-scrollbar
+{
+    width: .75rem;
+}
+body::-webkit-scrollbar-track
+{
+    background: #1e1e24;
+}
+body::-webkit-scrollbar-thumb
+{
+    background: #b84949;
+    border-radius: 20px;
+}
+main
+{
+    margin-top: 30px;
+    margin-left: 5rem;
+    margin-right: 0rem;
+}
 .docTextHeader 
 {
   text-transform: uppercase;
   letter-spacing: .5em;
   display: inline-block;
-  border: 4px double rgba(255, 255, 255, 0.25);
+  border: 4px double rgba(255, 255, 255, 0.574);
   border-width: 4px 0;
   text-align: center; /* Center the text */
   padding: 1.5em 0em;
@@ -13,7 +54,8 @@
   right: 0; 
   width: 100%;
   overflow: visible;
-  margin-top: -30px;
+  margin-top: -50px;
+  box-shadow: 0px 0px 20px #000dff;
 }
 .docTextHeader p
 {
@@ -146,7 +188,22 @@
     color: #fc6464;
     font-weight: 400;
 }
-
+.docSection p span#style1
+{
+    color: rgb(51, 255, 245);
+}
+.docSection p span#style2
+{
+    color: #fc6464;
+}
+.docSection p span#style3
+{
+    color: #3b76ff;
+}
+.docSection p span#style4
+{
+    color: #3bd5ff;
+}
 .docInnerSection
 {
     display: grid;
@@ -199,7 +256,7 @@
     border-style: solid;
     border-color: rgb(0, 238, 255);
     border-width: 2px;
-    box-shadow: 0px 0px 5px #0095ff;
+    box-shadow: 0px 0px 20px #004cff;
 }
 
 .docInnerInnerSection h1
@@ -211,6 +268,61 @@
     color: rgb(0, 123, 255);
     margin: 10px;
     margin-bottom: 0px;
+    position: relative;
+}
+.docInnerInnerSection div
+{
+    text-align: center;
+    margin: 0 auto;
+}
+.docInnerInnerSection .collapseSection
+{
+    display: block;
+}
+.docInnerInnerSection .dropDown-btn
+{
+    margin-top: 10px;
+    background-color: #1474b8;
+    border: solid;
+    border-width: 2px;
+    border-color: white;
+    border-radius: 8px;
+    width: 80%;
+    height: auto;
+    transition: .5s;
+    box-shadow: none;
+}
+.docInnerInnerSection .dropDown-btn:hover
+{
+    width: 70%;
+    box-shadow: 0px 0px 20px #004cff;
+    background-color: #008cff;
+}
+.docInnerInnerSection .dropDown-btn:active
+{
+    width: 70%;
+    box-shadow: 0px 0px 20px #004cff;
+    background-color: #2137ff;
+}
+.docInnerInnerSection .dropDown-btn#alt
+{
+    background-color: transparent;
+}
+.docInnerInnerSection .dropDown-btn#alt:hover
+{
+    background-color: #004cff;
+}
+.docInnerInnerSection .dropDown-btn#alt:active
+{
+    background-color: #002680;
+}
+.docInnerInnerSection .dropDown-btn h1
+{
+    margin: 0 auto;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+    color: white;
 }
 .docInnerInnerSection p span#style1
 {
@@ -243,4 +355,134 @@
     color: rgb(255, 255, 255);
     font-size: 40px;
     font-weight: 400px;
+}
+.author
+{
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+    background-color: #131415;
+    width: 50%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-color: #00bbff;
+    border-width: 2px;
+    box-shadow: 0px 0px 20px #0004ff;
+    border-radius: 80px;
+}
+.author
+{
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-weight: 200px;
+    font-size: 15px;
+}
+.author h1
+{
+    color: rgb(255, 255, 255);
+}
+
+@media only screen and (max-width: 1000px) and (min-width: 600px)
+{
+    .author h1
+    {
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 600px) 
+{
+    .author h1
+    {
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width: 1400px) and (min-width: 1000px) 
+{
+    .author h1
+    {
+        font-size: 30px;
+    }
+}
+.codeSnipit
+{
+    display: block;
+    max-width: 60vw;
+    max-height: 100%;
+
+    border: solid;
+    border-color: #3ae1ff;
+    border-width: 3px;
+
+    
+    font-size: 20px;
+    background-color: #22222c;
+    color: white;
+    font-weight: 100;
+    
+    z-index: 10;
+}
+.codeSnipit pre 
+{
+    text-align: left;
+}
+.codeSnipit code
+{
+    color: rgb(205, 205, 205);
+    z-index: 10
+}
+.codeSnipit code span#class
+{
+    color: rgb(108, 213, 255);
+}
+.codeSnipit code span#accessType
+{
+    color: rgb(90, 164, 255);
+}
+.codeSnipit code span#operatorType
+{
+    color: rgb(181, 90, 255);
+}
+.codeSnipit code span#genericType
+{
+    color: rgb(255, 198, 133);
+}
+.codeSnipit code span#advancedDataType
+{
+    color: rgb(176, 255, 176);
+}
+.codeSnipit code span#attribute
+{
+    color: rgb(176, 255, 176);
+}
+.codeSnipit code span#string
+{
+    color: rgb(255, 103, 103);
+}
+.codeSnipit code span#comment
+{
+    color: rgb(72, 100, 126);
+}
+.codeSnipit-scrollable {
+    /* Set a fixed height for the scrollable container */
+    max-height: 100%; /* Adjust this value as needed */
+    /* Enable vertical scrolling for the container when its content overflows */
+    overflow: auto;
+}
+.codeSnipit-scrollable::-webkit-scrollbar
+{
+    width: 0.75rem;
+}
+.codeSnipit-scrollable::-webkit-scrollbar-track
+{
+    background: #1e1e24;
+}
+.codeSnipit-scrollable::-webkit-scrollbar-thumb
+{
+    background: #006eff;
+    border-radius: 20px;   
 }

@@ -20,9 +20,9 @@ h1
 }
 body
 {
-    color: black;
-    background-color: #15161c;
-    margin: 0;
+    /* color: black;
+    background-color: #15161c; */
+    margin-top: 20px;
     padding: 0;
 }
 body::-webkit-scrollbar
@@ -38,12 +38,12 @@ body::-webkit-scrollbar-thumb
     background: #b84949;
     border-radius: 20px;
 }
-main
+/* main
 {
     margin-top: 30px;
     margin-left: 5rem;
     margin-right: 0rem;
-}
+} */
 .navbar
 {
     margin-top: -30px;
@@ -108,6 +108,10 @@ main
 {
     display: block;
 }
+iframe
+{
+  overflow:hidden
+}
 .logo
 {
     font-weight: bold;
@@ -137,6 +141,7 @@ main
 Documentation Right Side Nav Bar:
 =======================================================
 */
+
 .btn{
   position: sticky;
   top: 65px;
@@ -152,8 +157,28 @@ Documentation Right Side Nav Bar:
   transition: .4s ease-in-out
 }
 .btn.click{
-  right: 325px;
-  transition: .25s ease-in-out
+  right: 365px;
+  transition: .25s ease-in-out;
+  animation-name: animateSideBarButtonShowing;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1);
+  animation-iteration-count: infinite;
+}
+@keyframes animateSideBarButtonShowing
+{
+  0%
+  {
+    transform: scale(1) translateY(0%);
+  }
+  10%
+  {
+    transform: scale(.9) translateY(50%);
+  }
+  30%
+  {
+    transform: scale(1) translateY(0%);
+  }
+
 }
 .btn span{
   color: white;
@@ -174,17 +199,32 @@ Documentation Right Side Nav Bar:
 }
 
 .sidebar{
-    top: -5px;
+
+    top: 0px;
     position: fixed;
-    width: 300px;
+    width: 350px;
     height: 100%;
     right: -350px;
     background: #13141b;
     transition: right 0.4s ease;
     z-index: 5;
+    overflow: hidden;
 }
 .sidebar.show{
+  overflow: hidden;
   right: 0px;
+  box-shadow: 0px 0px 200px rgb(21, 0, 255);
+  animation-name: animateSideBarShowing;
+  animation-duration: 1.25s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes animateSideBarShowing
+{
+  0%{box-shadow: 0px 0px 200px rgb(21, 0, 255);}
+  50%{box-shadow: 0px 0px 200px rgba(47, 0, 255, 0.679);}
+  100%{box-shadow: 0px 0px 200px rgb(21, 0, 255);}
 }
 .sidebar .text{
   color: rgb(101, 193, 255);
@@ -194,6 +234,17 @@ Documentation Right Side Nav Bar:
   text-align: center;
   background: #101010;
   letter-spacing: 1px;
+}
+.sidebar .text a
+{
+  color: rgb(101, 193, 255);
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 65px;
+  text-align: center;
+  background: #101010;
+  letter-spacing: 1px;
+  text-decoration: none;
 }
 .sidebar ul {
     background: #101010;
@@ -213,7 +264,7 @@ Documentation Right Side Nav Bar:
   
   .sidebar ul li a {
     position: relative;
-    color: white;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-size: 18px;
     padding-left: 40px;
@@ -238,7 +289,9 @@ Documentation Right Side Nav Bar:
     position: static;
     display: none;
   }
-  
+  .sidebar ul .rgd-LearningScenes-show.show,
+  .sidebar ul .rgd-UtilityComponents-show.show,
+  .sidebar ul .rgd-ExtensionMethods-show.show,
   .sidebar ul .rgd-show.show,
   .sidebar ul .rgd2-show.show,
   .sidebar ul .rgd3-show.show,
@@ -269,19 +322,40 @@ Documentation Right Side Nav Bar:
   .sidebar ul ul li a {
     font-size: 17px;
     color: #e6e6e6;
-    padding-left: 80px;
+    padding-left: 20px;
   }
   
   .sidebar ul ul li ul li a {
     font-size: 17px;
     color: #e6e6e6;
-    padding-left: 120px;
+    padding-left: 40px;
+  }
+  .sidebar ul ul li ul li ul li a {
+    font-size: 17px;
+    color: #e6e6e6;
+    padding-left: 80px;
   }
   
   .sidebar ul li.active ul li a {
     color: #e6e6e6;
     background: #101010;
     border-left-color: transparent;
+  }
+  .sidebar span#workingOn{
+    color: rgb(205, 67, 67);
+    border-left-color: transparent;
+    position: relative;
+    font-size: 17px;
+    transition: transform 0.4s;
+  }
+  .sidebar span#workingOnHeader{
+    padding-left: 20px;
+    color: rgb(205, 67, 67);
+    border-left-color: transparent;
+    position: relative;
+    font-size: 20px;
+    text-align: center;
+    transition: transform 0.4s;
   }
   
   .sidebar ul ul li a:hover {
@@ -322,7 +396,7 @@ Documentation Right Side Nav Bar:
 
 .docsnavbar-scrollable {
     /* Set a fixed height for the scrollable container */
-    max-height: 100vh; /* Adjust this value as needed */
+    max-height: 100%; /* Adjust this value as needed */
     /* Enable vertical scrolling for the container when its content overflows */
     overflow-y: auto;
 }

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<header>
+    <!-- --{Global CSS}-- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/><!-- --{Used For Icon Change in RGD docs button}-- -->
+    
+    <!-- --{Global Script Helpers}-- -->
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+
+    <!-- --{Google Fonts}-- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Konkhmer+Sleokchher&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    
+    <!-- --{Personal CSS}-- -->
+    <link rel="stylesheet" href="../../../MythicsNavbarDocumentation.css">
+    <link rel="stylesheet" href="../../documentation.css">
+</header>
+<style>
+    /*
+    =======================================================
+    NOTE: I could not find a way to change the location with
+    <div class="name" style = "">; instead a change is to
+    add a identifier id and just change the background url
+    for each html file that has a different folder location.
+    =======================================================
+    */
+    .docTextHeader p span#one
+    {
+        text-align: center;
+        font: 700 3em/1 "Oswald", sans-serif;
+        letter-spacing: 0;
+        padding: 0.25em 0 0.325em;
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-shadow: 0 0 80px rgba(255, 255, 255, 0.5);
+        /* Clip Background Image */
+        background: url(../../../../Images/graphics/Scrollers/scroll1blue.png) repeat-y;
+        -webkit-background-clip: text;
+        background-clip: text;
+        /* Animate Background Image */
+        -webkit-text-fill-color: transparent;
+        -webkit-animation: aitf 80s linear infinite;
+        animation: aitf 80s linear infinite;
+        /* Activate hardware acceleration for smoother animations */
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        -webkit-backface-visibility: visible;
+        backface-visibility: visible;
+    }
+</style>
+<body>
+    <iframe id="navBarFrame" src="../../../navbar.html" style="position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:5;" frameborder="0">
+        Weird issue supporting navbar. Please contact Admin via discord. Sorry about this - Rebel Game Devs Club :/.
+    </iframe>
+    <!-- --{main is shifted by 5 rem to be to the right of the left navbar}-- -->
+    <main>
+        <!-- --{Title}-- -->
+        <div class="docTextHeader">
+            <p>
+                <span id="one" style="font-size: 30px;">
+                Documentation
+                </span>
+        </div>
+        
+        <!-- --{Start Documentation}-- -->
+        <div class="docSection">
+            <h1 id="one"><span>UI Generic Button Learning Scene</span></h1>
+            <p>
+                The UI Generic Button learning scene showcases the different ways to use this unique button.
+                The <span class="fixInteractables"><a href="https://docs.unity3d.com/2018.2/Documentation/ScriptReference/UI.Button.html" target="_blank">Unity Button Component</a></span>
+                is great, but is very limited. You only can do on click events, and change the color of the button out of the box. The Rebel Game Devs Generic Button creates more options.
+                You can change rotation, scale, position, color, lerp graph type, and so much more. You can Read up on the <span class="fixInteractables"><a href="../Components/RGD_UIGenericButton.html">RGD_UI_Generic_Button here</a></span>.
+            </p>
+            
+            <div class="docInnerSection">
+                <div class="docInnerInnerSection">
+                    
+                            <img src="UIButton/1.png" alt="img1">
+                </div>
+            </div>
+            
+        </div>
+        <div class="author">
+            <h1>
+                Author: Brandon Bird (Mythic)
+            </h1>
+        </div>
+    </main>
+    
+</body>
+<script>
+    //Rebel Game Dev Docs:
+    var iframe = document.getElementById("navBarFrame");
+
+    //Check if right side nav bar is clicked. If so change z level so class fixInteractable's z layer will not show above
+    window.addEventListener('message', function(event)
+    {
+        if(event.data === 'buttonClicked')
+        {
+            if(iframe.style.zIndex <= "5")
+            {
+                iframe.style.zIndex = "500";
+            }
+            else
+            {
+                iframe.style.zIndex = "5";
+            }
+        }
+        if(event.data === 'leftNavHovered')
+        {
+            iframe.style.zIndex = "500";
+        }
+        if(event.data == 'stoppedHovering')
+        {
+            iframe.style.zIndex = "5";
+        }
+    });
+
+</script>
+</html>
