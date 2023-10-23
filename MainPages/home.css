@@ -14,7 +14,7 @@ body {
 
 .hexContainer
 {
-    margin-top: 5vw;
+    margin-top: -10vw;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -140,23 +140,58 @@ section
     align-items: center;
     min-height: 50px;
     padding: 100px 20vw;
+    padding-bottom: 0px;
     z-index: 0;
     text-align: center;
 }
 section p
 {
-    font-family: 'Oswald';
-    transition: .5s, cubic-bezier(0.86, 0, 0.07, 1);
-    color: rgb(238, 238, 238);
-    font-size: 32px;
-    z-index: 0;
+    padding-top: 10px;
+    font-size: 4vw;
+    font-family: "Oswald", sans-serif;
+    color: white;
+    transition: .33s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 section h1
 {
-    font-size: 48px;
-    font-family: 'Oswald';
-    transition: .5s, cubic-bezier(0.86, 0, 0.07, 1);
-    color: rgb(255, 255, 255);
+    padding-top: 10px;
+    font-size: 6vw;
+    font-family: "Oswald", sans-serif;
+    color: white;
+    transition: .33s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+.commonQuestion
+{
+    width: 65vw;
+    height: fit-content;
+    padding: 20px;
+    margin: 20px;
+    background: #121212;
+    border: solid;
+    border-color: white;
+    border-radius: 10px;
+    border-width: 1px;
+    filter: drop-shadow(0px 0px 16px rgb(0, 0, 0));
+}
+section h2#style2
+{
+    text-align: center;
+    width: 100%;
+    padding-top: 0px;
+    font-size: 4vw;
+    font-family: "Oswald", sans-serif;
+    color: rgb(255, 91, 91);
+    transition: .33s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+section p#style2
+{
+    text-align: center;
+    width: 100%;
+    padding-top: 10px;
+    font-size: 2.5vw;
+    font-family: "Oswald", sans-serif;
+    color: white;
+    transition: .33s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 section a
 {
@@ -388,4 +423,300 @@ section a
 .backgroundAbstract#style4 svg
 {
     fill: #e4e4e48d;
+}
+.itemContainer
+{
+    margin-top: 5vw;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.itemContainer .itemArea
+{
+    display: flex;
+    gap: 2vw;
+}
+.itemContainer .itemArea.last
+{
+    transform: translateY(5vw);
+}
+.itemArea .itemBackgroudWrapper .item {
+    position: relative;
+    z-index: 12; /* Set a higher value */
+}
+.itemContainer .itemArea .item
+{
+    position: relative;
+    width: calc(15vw * .75);
+    height: calc(18vw * .75);
+    margin: 0 1vw;
+    clip-path: circle(45%);
+    background: rgb(48, 76, 111);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: .33s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    transition-delay: 0s;
+}
+.itemContainer .itemArea .item.behind 
+{
+    position: absolute;
+    z-index: 11;
+    top: 0;
+    left: 0vw;
+    width: calc(15vw * .8);
+    height: calc(18vw * .8);
+    margin: -0.5vw 0.65vw;
+    background: rgb(14, 14, 14);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    clip-path: circle(45%);
+    transition: .33s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+.itemContainer .itemArea .item.behindSecondary 
+{
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0vw;
+    width: calc(15vw * .75);
+    height: calc(18vw * .75);
+    margin: 0vw 1vw;
+    background: #30456f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    clip-path: circle(45%);
+    transition: .33s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+.itemBackgroudWrapper
+{
+    filter: drop-shadow(0px 0px 8px rgb(0, 0, 0));
+    transition: .5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+.itemBackgroudWrapper h3
+{
+    padding-top: 10px;
+    font-size: 1.5vw;
+    font-family: "Oswald", sans-serif;
+    color: white;
+    transition: .33s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+.itemBackgroudWrapper:hover
+{
+    filter: drop-shadow(0px 0px 20px rgb(0, 170, 255));
+    transform: rotate(180deg);
+}
+.itemBackgroudWrapper:hover .item#base
+{
+    background: rgb(77, 136, 194);
+    scale: .7;
+}
+.itemBackgroudWrapper:hover .item.behind,.item.behindSecondary 
+{
+    transform: scale(.8);
+}
+
+.itemBackgroudWrapper:hover img
+{
+    transform: rotateZ(180deg);
+}
+.itemBackgroudWrapper:hover h3
+{
+    transform: rotateZ(180deg);
+}
+.itemContainer .itemArea .itemBackgroudWrapper .item img
+{
+    transition: .5s ease-in-out;
+}
+.itemContainer .itemArea .item h3
+{
+    font-size: 1.5vw;
+    font-family: "Oswald", sans-serif;
+    color: white;
+    transition: .33s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+.itemContainer .itemArea .itemBackgroudWrapper .item img
+{
+    fill: #ffffff !important;
+    width: calc(10vw * 0.8);
+    height: calc(8vw * 0.8);
+}
+
+.eventContainer
+{
+    margin-top: 5vw;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.event
+{
+    position: relative;
+    width: calc(75vw * .75);
+    height: calc(60vw * .75);
+    background: rgb(7, 9, 36);
+    border: solid;
+    border-color: #020d2d;
+    border-radius: 5vw;
+    border-width: .5vw;
+    margin-bottom: 5vw;
+    display: flex;
+    justify-content:baseline;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: .33s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    transition-delay: 0s;
+    filter: drop-shadow(0px 0px 20px rgb(0, 0, 0));
+}
+.event p
+{
+    padding-top: 3vw;
+    font-size: 3vw;
+    font-family: "Oswald", sans-serif;
+    color: rgb(255, 255, 255);
+    text-shadow:  3px 3px 10px #0f0f10;
+    padding-left: 12vw;
+    padding-right: 12vw;
+    transition: .33s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    width: 80%;
+    text-align: left;
+
+}
+.event p span
+{
+    color: rgb(255, 128, 128);
+}
+.event h1
+{
+    padding-top: 10px;
+    font-size: 4vw;
+    font-family: "Oswald", sans-serif;
+    color: rgb(128, 227, 255);
+    text-shadow:  3px 3px 10px #0f0f10;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    transition: .33s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+/*
+==================================================
+Button #1:
+==================================================
+*/
+:root .mythicsButton
+{
+    /* --{Button Width Size:}-- */
+    --initialSize: 30vw;
+    --hoverSize: 25vw;
+    --clickedSize: 20vw;
+
+    /* --{Total Max Line Height:}-- */
+    --lineHeight: 10vh;
+
+    /* --{Font Size:}-- */
+    --initialFontSize: 4vw;
+    --hoverFontSize: 3vw;
+    --clickedFontSize: 3.5vw;
+
+    /* --{Font Spacing:}-- */
+    --initialLineSpacing: 6px;
+    --hoverLineSpacing: 12px;
+    --clickedLineSpacing: 8px;
+
+    /* --{Font Color:}-- */
+    --initialFontColor: #fff;
+    --hoverFontColor: #000;
+    --clickedFontColor: #fff;
+
+    /* --{Button Color:}-- */
+    --initialButtonColor: rgba(0, 0, 0, 0.42);
+    --hoverButtonColor: #fff;
+    --clickedButtonColor: rgba(0, 0, 0, 0.742);
+
+    /* --{Button Border Color:}-- */
+    --borderColor:#000000;
+
+    /* --{Button Border Radius:}-- */
+    --borderRadius: 0px;
+}
+.mythicsButtonContainer 
+{
+    display: flex;
+    align-items: center;
+    margin: auto;
+}
+.mythicsButton#one
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+.mythicsButton#one a
+{
+    /* --{Set Cursor Type:}-- */
+    cursor: pointer;
+
+    /* --{Spacing Between Siblings:}-- */
+    margin: 10px;
+    margin-top: -10px;
+    margin-bottom: 50px;
+
+    /* --{Button Elements:}-- */
+    background-color: var(--initialButtonColor);
+    width: var(--initialSize);
+    line-height: var(--lineHeight);
+    border: 2px solid var(--borderColor);
+    border-radius: var(--borderRadius);
+    -webkit-box-reflect: below 0px linear-gradient(transparent, #0002);
+    
+    /* --{Font}-- */
+        /* --{Fix Weird offset}-- */
+        padding-left: 5px;
+
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: var(--initialLineSpacing);
+    text-transform: uppercase;
+    color: var(--initialFontColor);
+     /*--{Scaling Font Size Formula: }--
+    /* font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));*/
+    font-size: var(--initialFontSize);
+    font-family: "Konkhmer Sleokchher", serif;
+    text-align: center;
+
+    /* --{Animation}-- */
+    transition: .5s;
+}
+.mythicsButton#one a:hover
+{
+    /* --{Hovering Effect}-- */
+    letter-spacing: var(--hoverLineSpacing);
+    color: var(--hoverFontColor);
+    background-color: var(--hoverButtonColor);
+    width: var(--hoverSize);
+    font-size: var(--hoverFontSize);
+}
+.mythicsButton#one a:active
+{
+    /* --{Hovering Effect}-- */
+    letter-spacing: var(--clickedLineSpacing);
+    color: var(--clickedFontColor);
+    background-color: var(--clickedButtonColor);
+    width: var(--clickedSize);
+    font-size: var(--clickedFontSize);
 }

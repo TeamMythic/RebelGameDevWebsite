@@ -71,7 +71,7 @@
     <div class="btn" id="myButton">
         <span class="fas fa-bars"></span>
      </div>
-    <nav class="sidebar">
+    <nav class="sidebar" id="docBar">
         <div class="docsnavbar-scrollable">
             <div class="text">
                 <a href="documentation.html" target="_parent">
@@ -381,6 +381,13 @@
         var body = document.getElementById('body');
         body.style.backgroundColor = 'transparent';
         
+        var btn = document.getElementById('myButton');
+        var nav = document.getElementById('docBar');
+        if(btn.classList.contains('click'))
+        {
+            btn.classList.remove('click');
+            nav.classList.remove('show');
+        }
     });
   </script>
 
