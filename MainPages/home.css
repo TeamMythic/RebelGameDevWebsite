@@ -620,9 +620,9 @@ Button #1:
 :root .mythicsButton
 {
     /* --{Button Width Size:}-- */
-    --initialSize: 30vw;
-    --hoverSize: 25vw;
-    --clickedSize: 20vw;
+    --initialSize: 40vw;
+    --hoverSize: 35vw;
+    --clickedSize: 28vw;
 
     /* --{Total Max Line Height:}-- */
     --lineHeight: 10vh;
@@ -719,4 +719,25 @@ Button #1:
     background-color: var(--clickedButtonColor);
     width: var(--clickedSize);
     font-size: var(--clickedFontSize);
+}
+@media only screen and (max-width: 1000px) and (min-width: 800px) {
+    .mythicsButton#one a
+    {
+        width: calc(var(--initialSize) * 1.2);
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 800px) and (min-width: 635px){
+    .mythicsButton#one a
+    {
+        width: calc(var(--initialSize) * 1.5);
+        font-size: 20px;
+    }
+}
+@media only screen and (max-width: 635px) {
+    .mythicsButton#one a
+    {
+        width: calc(var(--initialSize) * 1.5);
+        font-size: 10px;
+    }
 }
