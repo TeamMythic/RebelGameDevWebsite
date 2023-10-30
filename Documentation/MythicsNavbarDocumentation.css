@@ -38,36 +38,69 @@ body::-webkit-scrollbar-thumb
     background: #b84949;
     border-radius: 20px;
 }
-/* main
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+:root
 {
-    margin-top: 30px;
-    margin-left: 5rem;
-    margin-right: 0rem;
-} */
+    font-size: 16px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    --text-primary: #00aaff;
+    --text-secondary: #ffffff;
+    --bg: #23232e;
+    --bg-primary: #1e3d67;
+    --bg-secondary: #141418; 
+    --bgDropdownPrimary: rgb(0, 22, 59); 
+    --bgDropdownSecondary:  rgb(49, 143, 183); 
+    --bgDropdownInnerChild1Primary: rgb(0, 65, 3); 
+    --bgDropdownInnerChild1Secondary:  rgb(101, 197, 122); 
+}
+.navbar-scrollable {
+    /* Set a fixed height for the scrollable container */
+    max-height: 100%; /* Adjust this value as needed */
+    /* Enable vertical scrolling for the container when its content overflows */
+    overflow: hidden;
+    overflow-y: auto;
+}
+.navbar-scrollable::-webkit-scrollbar
+{
+    width: 0.75rem;
+}
+.navbar-scrollable::-webkit-scrollbar-track
+{
+    background: #1e1e24;
+}
+.navbar-scrollable::-webkit-scrollbar-thumb
+{
+    background: #006eff;
+    border-radius: 20px;   
+}
 .navbar
 {
-    margin-top: -30px;
-    width: 5rem;
-    height: 101vh;
-    position: fixed;
-    background-color: var(--bg-primary);
-    transition: width 200ms ease;
-    z-index: 10;
-    overflow: hidden;
+  position: fixed;
+  text-align: center;
+  width: 5rem;
+  height: 105%;
+  margin-top: -20px;
+  background-color: var(--bg-primary);
+  transition: width 200ms ease;
+  z-index: 10;
+  overflow: hidden;
+  filter: drop-shadow(0px 0px 10px rgb(0, 0, 0));
+  left: 0;
 }
 .navbar-nav
 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;  
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;   
-    height: 100%;
 }
 .nav-item
 {
     width: 100%;
+    height: 4rem;
 }
 .nav-item:last-child
 {
@@ -77,12 +110,15 @@ body::-webkit-scrollbar-thumb
 {
     display: flex;
     align-items: center;
-    height: 5rem;
+    max-height: 4rem;
+    min-height: 4rem;
     color: var(--text-primary);
     text-decoration: none;
-    fill: rgb(255, 43, 43);
+    fill: rgb(43, 230, 255);
     filter: grayscale(100%) opacity(.7);
     transition: .25s;
+    
+    
 }
 .nav-link:hover
 {
@@ -94,6 +130,7 @@ body::-webkit-scrollbar-thumb
 {
     display: none;
     margin-left: 1rem;
+    
 }
 .nav-link svg
 {
@@ -106,11 +143,8 @@ body::-webkit-scrollbar-thumb
 }
 .navbar:hover .link-text
 {
+    
     display: block;
-}
-iframe
-{
-  overflow:hidden
 }
 .logo
 {
@@ -122,9 +156,13 @@ iframe
     color: var(--text-secondary);
     background: var(--bg-secondary);
     width: 100%;
+    max-height: 80px;
+    min-height: 80px;
     font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.3ch;
+
+    white-space: nowrap;
 }
 .logo svg
 {
@@ -135,6 +173,7 @@ iframe
 {
     transform: rotate(-360deg);
 }
+
 
 /*
 =======================================================
