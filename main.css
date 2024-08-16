@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background: #1e3d67;
+    width: 100%;
+}
+
+.container {
+    max-width: 950px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.container .hexagonArea {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: -45px; /* Reduced gap between rows */
+}
+
+.container .hexagonArea.row1,
+.container .hexagonArea.row2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.container .hexagonArea.mobileRow1,
+.container .hexagonArea.mobileRow2,
+.container .hexagonArea.mobileRow3 {
+    display: none;
+}
+
+.container .hexagonArea .hexagon {
+    position: relative;
+    width: 90%;
+    height: 90%;
+    margin: 10px;
+    clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+    background: rgb(47, 73, 117);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: .5s;
+    transform: translateZ(0);
+}
+
+.hexagon-border {
+    position: relative;
+    width: 200px;
+    height: 233px;
+    margin: 10px;
+    clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
+    background: rgb(16, 16, 53);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: .5s;
+    transform: translateZ(0);
+}
+
+
+#center-hex {
+    background: rgb(255, 94, 20);
+}
+#center-hex:hover {
+    background: rgb(36, 255, 47);
+}
+
+.container .hexagonArea .hexagon-wrapper {
+    filter: drop-shadow(10px 6px 2px rgba(0, 0, 0, 0.5));
+    transition: .5s;
+    
+}
+.container .hexagonArea .hexagon-wrapper:hover {
+    filter: drop-shadow(0 0 30px rgba(0, 0, 0, 1));
+}
+
+.container .hexagonArea .hexagon img {
+    width: 60px;
+}
+
+.container .hexagonArea .hexagon h3 {
+    text-transform: uppercase;
+    font-family: "Archivo Black", sans-serif;
+    color: white;
+    font-style: normal;
+    font-weight: 600;
+    margin-top: 10px;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 1px;
+    backface-visibility: hidden;
+}
+
+.container .hexagonArea .hexagon:hover {
+    background: rgb(88, 122, 180);
+    transform: scale(0.85);
+}
+
+
+/* Media Query for tablets and mobile devices */
+@media (max-width: 968px) {
+    .container .hexagonArea.row1,
+    .container .hexagonArea.row2 {
+        display: none;
+    }
+
+    .container .hexagonArea.mobileRow1,
+    .container .hexagonArea.mobileRow3 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0px; /* Reduced grid gap */
+    }
+
+    .container .hexagonArea.mobileRow2 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 0px; /* Reduced grid gap */
+    }
+
+    .container .hexagonArea .hexagon-border {
+        width: 133px;
+        height: 155px;
+    }
+    .container .hexagonArea .hexagon img {
+        width: 40px;
+    }
+
+    .container .hexagonArea .hexagon h3 {
+        font-size: 14px;
+    }
+}
+
+/* Media Query for very small mobile devices */
+@media (max-width: 480px) {
+    .container .hexagonArea.mobileRow1,
+    .container .hexagonArea.mobileRow2,
+    .container .hexagonArea.mobileRow3 {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .container .hexagonArea .hexagon-border {
+        width: 100px;
+        height: 115px;
+    }
+
+    .container .hexagonArea .hexagon img {
+        width: 40px;
+    }
+
+    .container .hexagonArea .hexagon h3 {
+        font-size: 14px;
+    }
+}
+
+h1 {
+    color: white;
+    margin: 10px 0;
+}
