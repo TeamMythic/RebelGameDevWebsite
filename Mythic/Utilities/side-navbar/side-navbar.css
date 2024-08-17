@@ -6,6 +6,8 @@
     --bg-secondary:#141418;
     --icon-primary: #7ebaff;
     --icon-secondary: #4979df;
+    --overlay-opacity-normal:0;
+    --overlay-opacity-hovered:.5
 }
 
 body.side-navbar {
@@ -38,14 +40,13 @@ main.side-navbar {
     height: 100%;
 }
 
-.navbar-nav svg {
+.navbar-nav svg,img {
     width: 40px;
 }
 
 .nav-item {
     width: 100%;
 }
-
 .nav-item:last-child {
     margin-top: auto;
 }
@@ -71,7 +72,7 @@ main.side-navbar {
     white-space: nowrap;
 }
 
-.nav-link svg {
+.nav-link svg,img {
     min-width: 40px;
     margin: 0 20px;
 }
@@ -100,7 +101,7 @@ main.side-navbar {
     width: 100%;
 }
 
-.logo svg {
+.logo svg,img {
     transform: rotate(0deg);
     transition: transform .5s;
 }
@@ -131,7 +132,7 @@ main.side-navbar {
         height: 80px;
     }
     .nav-item {
-        width: 12.5%;
+        width: 12.25%;
     }
 
     .logo {
@@ -147,4 +148,23 @@ main.side-navbar {
     main.side-navbar {
         margin-left: 0px;
     }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 1); /* Adjust the alpha for dimming effect */
+    z-index: -1; /* Ensure it's above other elements but below the navbar */
+    opacity: var(--overlay-opacity-normal);
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+}
+
+/* Show the overlay when the navbar is hovered */
+.navbar:hover ~ .overlay {
+    opacity: var(--overlay-opacity-hovered);
+    pointer-events: auto;
 }
