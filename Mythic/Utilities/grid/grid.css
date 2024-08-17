@@ -1,23 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+/*
+For css to color filter generator for svg color change I used: https://angel-rs.github.io/css-color-filter-generator/
+*/
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-body {
+body.grid{
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh;
-    background: #1e3d67;
-    width: 100%;
 }
 
 .container {
-    max-width: 950px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; /*NOT USING in index.html so it's not the full screen*/
+    max-width: 95vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,6 +29,7 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     margin-bottom: -45px; /* Reduced gap between rows */
+    transition: .5s;
 }
 
 .container .hexagonArea.row1,
@@ -49,41 +49,31 @@ body {
     position: relative;
     width: 90%;
     height: 90%;
-    margin: 10px;
     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
-    background: rgb(47, 73, 117);
+    background: rgb(48, 76, 111);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     cursor: pointer;
-    transition: .5s;
-    transform: translateZ(0);
+    transition: .25s;
 }
 
 .hexagon-border {
     position: relative;
-    width: 200px;
-    height: 233px;
+    width: 12vw;/*200, 233*/
+    height: 14vw;
     margin: 10px;
     clip-path: polygon(0 25%, 50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%);
-    background: rgb(16, 16, 53);
+    background: rgb(13, 13, 29);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     cursor: pointer;
-    transition: .5s;
-    transform: translateZ(0);
+    transition: .25s;
 }
 
-
-#center-hex {
-    background: rgb(255, 94, 20);
-}
-#center-hex:hover {
-    background: rgb(36, 255, 47);
-}
 
 .container .hexagonArea .hexagon-wrapper {
     filter: drop-shadow(10px 6px 2px rgba(0, 0, 0, 0.5));
@@ -94,26 +84,76 @@ body {
     filter: drop-shadow(0 0 30px rgba(0, 0, 0, 1));
 }
 
-.container .hexagonArea .hexagon img {
-    width: 60px;
+.container .hexagonArea .hexagon-wrapper a {
+    text-decoration: none;
+}
+
+.container .hexagonArea .hexagon svg {
+    width: 5vw;
+    transition: fill .5s;
+}
+
+.container .hexagonArea .hexagon:hover svg {
+    fill: rgb(255, 183, 116)
+}
+
+.container .hexagonArea .hexagon:active svg {
+    fill: rgb(0, 0, 0)
+}
+.container .hexagonArea .hexagon:hover h3 {
+    color: rgb(255, 183, 116)
+}
+
+.container .hexagonArea .hexagon:active h3 {
+    color: rgb(0, 0, 0)
 }
 
 .container .hexagonArea .hexagon h3 {
     text-transform: uppercase;
     font-family: "Archivo Black", sans-serif;
-    color: white;
+    color: rgb(255, 255, 255);
     font-style: normal;
     font-weight: 600;
     margin-top: 10px;
-    font-size: 18px;
+    font-size: 1.25vw;
     text-align: center;
     letter-spacing: 1px;
     backface-visibility: hidden;
+    transform: rotate(0deg);
+    transition: .25s;
+}
+
+#center-hex {
+    background: rgb(150, 59, 59);
+}
+#center-hex:hover {
+    background: rgb(160, 87, 53);
+}
+#center-hex:hover svg{
+    fill: rgb(0, 0, 0)
+}
+#center-hex:hover h3{
+    color: rgb(0, 0, 0)
+}
+
+#center-hex:active {
+    background: rgb(255, 255, 255);
+}
+#center-hex:active svg{
+    fill: rgb(0, 0, 0)
+}
+#center-hex:active h3{
+    color: rgb(0, 0, 0)
 }
 
 .container .hexagonArea .hexagon:hover {
-    background: rgb(88, 122, 180);
+    background: rgb(150, 59, 59);
     transform: scale(0.85);
+}
+
+.container .hexagonArea .hexagon:active {
+    background: rgb(116, 116, 116);
+    transform: scale(0.65);
 }
 
 
@@ -138,41 +178,46 @@ body {
     }
 
     .container .hexagonArea .hexagon-border {
-        width: 133px;
-        height: 155px;
+        width: 25vw;/*133, 155*/
+        height: 28vw;
     }
-    .container .hexagonArea .hexagon img {
-        width: 40px;
-    }
-
     .container .hexagonArea .hexagon h3 {
-        font-size: 14px;
+        font-size: 2.5vw;
+    }
+    .container .hexagonArea .hexagon svg {
+        width: 8vw;
     }
 }
 
 /* Media Query for very small mobile devices */
-@media (max-width: 480px) {
+@media (max-width: 588px) {
+    .container .hexagonArea.row1,
+    .container .hexagonArea.row2 {
+        display: none;
+    }
+
     .container .hexagonArea.mobileRow1,
-    .container .hexagonArea.mobileRow2,
     .container .hexagonArea.mobileRow3 {
-        grid-template-columns: 1fr 1fr;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 0px; /* Reduced grid gap */
+    }
+
+    .container .hexagonArea.mobileRow2 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 0px; /* Reduced grid gap */
     }
 
     .container .hexagonArea .hexagon-border {
-        width: 100px;
-        height: 115px;
-    }
-
-    .container .hexagonArea .hexagon img {
-        width: 40px;
+        width: 25vw;/*100, 115*/
+        height: 28vw;
     }
 
     .container .hexagonArea .hexagon h3 {
-        font-size: 14px;
+        font-size: 2.5vw;
     }
-}
-
-h1 {
-    color: white;
-    margin: 10px 0;
+    .container .hexagonArea .hexagon svg {
+        width: 8vw;
+    }
 }

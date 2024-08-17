@@ -1,0 +1,48 @@
+/* WAVES: https://app.haikei.app */
+
+:root {
+    --color-blue: #1e3d67;
+    --color-grey: #202731;
+}
+
+body {
+    margin: 0;
+    color: white;
+    background: black;
+    font-size: 28px;
+}
+
+section {
+    margin: 0;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 50px;
+    padding: 0px 20vw;
+}
+
+.spacer {
+    aspect-ratio: 960/300;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.layer1-top {
+    background-image: url('wave1Top.svg');
+}
+.layer1-bottom {
+    background-image: url('wave1Bottom.svg');
+}
+
+.blue {
+    background: var(--color-blue);
+}
+
+.grey {
+    background: var(--color-grey);
+}
