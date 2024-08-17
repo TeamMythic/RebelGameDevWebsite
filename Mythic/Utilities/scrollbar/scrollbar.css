@@ -1,0 +1,24 @@
+:root {
+    --thumb: #4982b8;
+    --track: #1e1e24;
+    --border-radius: 10px;
+}
+
+body::-webkit-scrollbar {
+    width: 10px;
+}
+body::-webkit-scrollbar-track {
+    background: var(--track);
+}
+body::-webkit-scrollbar-thumb {
+    background: var(--thumb);
+    border-radius: var(--border-radius);
+}
+
+/*
+example to override: 
+body.side-navbar {
+    --thumb: color; 
+    --track: color;
+}
+*/

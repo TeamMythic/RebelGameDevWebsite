@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
+:root {
+    --text-primary: #ffffff;
+    --bg-primary: #23232e;
+    --text-secondary:#219bff;
+    --bg-secondary:#141418;
+    --icon-primary: #7ebaff;
+    --icon-secondary: #4979df;
+}
+
+body.side-navbar {
+    color: black;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+}
+
+main.side-navbar {
+    margin-left: 80px;
+    padding: 20px;
+}
+
+.navbar {
+    position: fixed;
+    background-color: var(--bg-primary);
+    overflow: hidden;
+    transition: .2s ease;
+}
+
+.navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.navbar-nav svg {
+    width: 40px;
+}
+
+.nav-item {
+    width: 100%;
+}
+
+.nav-item:last-child {
+    margin-top: auto;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    color: var(--text-primary);
+    text-decoration: none;
+    filter: grayscale(100%) opacity(0.7);
+    transform: .2s;
+}
+
+.nav-link:hover {
+    filter: grayscale(0%) opacity(1);
+}
+
+
+.link-text {
+    display: none;
+    margin-left: 20px;
+    white-space: nowrap;
+}
+
+.nav-link svg {
+    min-width: 40px;
+    margin: 0 20px;
+}
+
+.fa-primary {
+    color: var(--icon-primary);
+}
+.fa-secondary {
+    color: var(--icon-secondary);
+}
+
+.fa-primary, 
+.fa-secondary {
+    transition: .2s;
+}
+
+.logo {
+    font-family: "Roboto Serif", serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--text-secondary);
+    background-color: var(--bg-secondary);
+    letter-spacing: 0.3ch;
+    width: 100%;
+}
+
+.logo svg {
+    transform: rotate(0deg);
+    transition: transform .5s;
+}
+
+.navbar:hover .logo svg {
+    transform: rotate(-180deg);
+}
+
+/*Large Screen*/
+@media only screen and (min-width: 700px) {
+    .navbar {
+        width: 80px;
+        height: 100vh;
+    }
+    .navbar:hover {
+        width: 400px;
+    }
+    .navbar:hover .link-text {
+        display: block;
+    }
+}
+
+/*Small Screen*/
+@media only screen and (max-width: 700px) {
+    .navbar {
+        bottom: 0;
+        width: 100vw;
+        height: 80px;
+    }
+    .nav-item {
+        width: 12.5%;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+    }
+    .nav-link {
+        justify-content: center;
+    }
+    main.side-navbar {
+        margin-left: 0px;
+    }
+}

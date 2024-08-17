@@ -4,7 +4,6 @@
 For css to color filter generator for svg color change I used: https://angel-rs.github.io/css-color-filter-generator/
 */
 
-
 body.grid{
     display: flex;
     flex-direction: column;
@@ -178,8 +177,8 @@ body.grid{
     }
 
     .container .hexagonArea .hexagon-border {
-        width: 25vw;/*133, 155*/
-        height: 28vw;
+        width: 23vw;/*133, 155*/
+        height: 26vw;
     }
     .container .hexagonArea .hexagon h3 {
         font-size: 2.5vw;

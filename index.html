@@ -4,10 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel = "stylesheet" href = "Mythic/Utilities/wave/waves.css">
-    <link rel="stylesheet" href="Mythic/Utilities/grid/grid.css">
+    <link rel="stylesheet" a href="./Mythic/Utilities/scrollbar/scrollbar.css">
+    <link rel="stylesheet" a href="./Mythic/Utilities/side-navbar/side-navbar.css">
+    <link rel = "stylesheet" href = "./Mythic/Utilities/wave/waves.css">
+    <link rel="stylesheet" href="./Mythic/Utilities/grid/grid.css">
 </head>
+<style>
+    body {
+        --thumb: #ff4747;
+        font-size: 25px;
+    }
+</style>
 <body>
+    <nav id="navbar" class="navbar" style="z-index: 100;"></nav>
     <!--NOTE: padding needs to be 0 (is 20px on sides), otherwise hex's will not function right in the rows-->
     <section class="grey" style="padding: 0px"> 
         <div class="grid">
@@ -204,7 +213,16 @@
     <div class="spacer layer1-top"></div>
 </body>
 <script type="module">
-    import { applySmoothScroll } from './Mythic/Utilities/Movement/scrollers.js';
+    import { applySmoothScroll, scrollToHashOnLoad} from './Mythic/Utilities/Movement/scrollers.js';
     applySmoothScroll('a[href^="#"]', 200);
+    scrollToHashOnLoad(0);
+</script>
+<script>
+    fetch('./Mythic/Utilities/side-navbar/side-navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar').innerHTML = data;
+        })
+        .catch(error => console.error('Error fetching the navbar:', error));
 </script>
 </html>
