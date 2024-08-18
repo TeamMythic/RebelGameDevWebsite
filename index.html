@@ -329,16 +329,25 @@
         .then(response => response.text())
         .then(data => {
             document.getElementById('navbar').innerHTML = data;
-            // document.querySelectorAll('a').forEach(function(link) {
-            //     link.addEventListener('contextmenu', function(e) {
-            //         e.preventDefault(); // Prevent the context menu from appearing
-            //     });
+            document.querySelectorAll('a').forEach(function(link) {
+                // Prevent long-press context menu on mobile
+                link.addEventListener('touchstart', function(e) {
+                    // Set a timer to prevent default action if held for too long
+                    this.longPressTimer = setTimeout(function() {
+                        e.preventDefault();
+                    }, 500); // Adjust the time (500ms) as needed
+                });
 
-            //     // Optionally prevent long press to trigger the context menu
-            //     link.addEventListener('touchstart', function(e) {
-            //         e.preventDefault(); // Prevent the default action on touchstart
-            //     });
-            // });
+                link.addEventListener('touchend', function(e) {
+                    // Clear the timer when touch ends
+                    clearTimeout(this.longPressTimer);
+                });
+
+                link.addEventListener('touchmove', function(e) {
+                    // If the user moves their finger, cancel the timer
+                    clearTimeout(this.longPressTimer);
+                });
+            });
         })
         .catch(error => console.error('Error fetching the navbar:', error));
 </script>
