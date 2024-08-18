@@ -92,10 +92,6 @@ body.grid{
     transition: fill .5s;
 }
 
-.container .hexagonArea .hexagon:hover svg {
-    fill: rgb(255, 183, 116)
-}
-
 .container .hexagonArea .hexagon:active svg {
     fill: rgb(0, 0, 0)
 }
@@ -128,7 +124,18 @@ body.grid{
 #center-hex:hover {
     background: rgb(160, 87, 53);
 }
-#center-hex:hover svg{
+
+.hexagon svg path {
+    fill: #e8eaed;
+}
+
+.grid .fa-primary svg {
+    fill: var(rgb(255, 255, 255));
+}
+.grid .fa-secondary svg{
+    fill: var(rgb(255, 1, 1));
+}
+#center-hex:hover .fa-primary svg{
     fill: rgb(0, 0, 0)
 }
 #center-hex:hover h3{

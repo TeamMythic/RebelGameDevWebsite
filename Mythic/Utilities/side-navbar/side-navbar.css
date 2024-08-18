@@ -77,10 +77,10 @@ main.side-navbar {
     margin: 0 20px;
 }
 
-.fa-primary {
+.navbar .fa-primary {
     color: var(--icon-primary);
 }
-.fa-secondary {
+.navbar .fa-secondary {
     color: var(--icon-secondary);
 }
 
