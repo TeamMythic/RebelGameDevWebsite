@@ -312,22 +312,23 @@
         .then(response => response.text())
         .then(data => {
             document.getElementById('navbar').innerHTML = data;
+
+            //hovering on mobile:
+            let allLinks = document.querySelectorAll('a');
+    
+            let hover = (e) => {
+                e.target.classList.add('hover');
+            }
+        
+            let end = (e) => {
+                e.target.classList.remove('hover');
+            }
+        
+            allLinks.forEach(btn => {
+                btn.addEventListener('touchmove', hover);
+                btn.addEventListener('touchend', end);
+            })
         })
         .catch(error => console.error('Error fetching the navbar:', error));
-</script>
-<script>
-    const elements = document.querySelectorAll('.hover-effect');
-
-    elements.forEach((element) => {
-    // Add touchstart event listener
-    element.addEventListener('touchstart', () => {
-        element.classList.add('touch-hover-effect');
-    });
-
-    element.addEventListener('touchend', () => {
-        // Remove touch effect
-        element.classList.remove('touch-hover-effect');
-    });
-    });
 </script>
 </html>
