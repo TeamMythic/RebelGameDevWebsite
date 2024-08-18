@@ -26,6 +26,11 @@ section {
 }
 
 .spacer {
+    margin: 0;
+    /* Fix line tearing with negative 1 pixel for mobile phones*/
+    margin-top: -1px;
+    margin-bottom: -1px;
+    padding: 0;
     aspect-ratio: 960/300;
     width: 100%;
     background-repeat: no-repeat;

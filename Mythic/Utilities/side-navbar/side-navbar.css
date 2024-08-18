@@ -163,8 +163,15 @@ main.side-navbar {
     transition: opacity 0.5s ease;
 }
 
-/* Show the overlay when the navbar is hovered */
-.navbar:hover ~ .overlay {
-    opacity: var(--overlay-opacity-hovered);
-    pointer-events: auto;
+
+@media (hover :hover) {
+    /* Show the overlay when the navbar is hovered */
+    .navbar:hover ~ .overlay {
+        opacity: var(--overlay-opacity-hovered);
+        pointer-events: auto;
+    }
+}
+
+@media (hover: none) {
+
 }
