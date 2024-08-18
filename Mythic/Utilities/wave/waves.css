@@ -1,5 +1,5 @@
 /* WAVES: https://app.haikei.app */
-
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 :root {
     --color-blue: #1e3d67;
     --color-grey: #202731;
@@ -50,4 +50,18 @@ section {
 
 .grey {
     background: var(--color-grey);
+}
+
+section h1 {
+    font-size: 48px;
+    font-family: "Oswald", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+}
+
+section p {
+    font-size: 32px;
+    font-family: "Oswald", sans-serif;
+    font-style: normal;
+    font-weight: 200;
 }

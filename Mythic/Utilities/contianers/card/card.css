@@ -1,0 +1,92 @@
+@property --gradient-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+:root {
+    --card-bc: #050614;
+    --clr-3: #bf34ff;
+    --clr-4: #3f5cff;
+    --clr-5: #3cffff;
+    --border: -.15rem;
+    --blur-radius: 2rem;
+}
+
+body {
+    background-color: #040f1a;
+    min-height: 100vh;
+    display: grid;
+    place-content: center;
+    margin: 0px;
+}
+.card-container {
+    min-width: 100px;
+    min-height: 100px;
+    max-width: 65vw;
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card {
+    height: auto;
+    width: auto;
+    background: var(--card-bc);
+    border-radius: 0.5rem;
+    position: relative;
+    flex: 1 1 300px;
+    box-sizing: border-box;
+}
+
+.card-inner {
+    text-align: center;
+    justify-content: center;
+    padding: 20px;
+    min-width: 650px;
+    min-height: 100px;
+    max-width: 100%;
+    
+}
+
+.card h1, p{
+    color: white;
+}
+
+.card h1{
+    color: white;
+    font-size: 48px;
+}
+.card p{
+    color: white;
+    font-size: 32px;
+}
+.card::before,
+.card::after {
+    content: "";
+    position: absolute;
+    inset: var(--border);
+    z-index: -1;
+    background: conic-gradient(
+        from var(--gradient-angle),
+        var(--clr-3),
+        var(--clr-4),
+        var(--clr-5),
+        var(--clr-4),
+        var(--clr-3)
+    );
+    border-radius: inherit;
+    animation: rotation 3s linear infinite
+}
+
+.card::after {
+    filter: blur(var(--blur-radius));
+}
+
+@keyframes rotation {
+    0%   {--gradient-angle: 0deg; }
+    100% {--gradient-angle: 360deg; }
+}
