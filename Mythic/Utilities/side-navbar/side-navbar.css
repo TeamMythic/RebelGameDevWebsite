@@ -27,6 +27,7 @@ main.side-navbar {
     position: fixed;
     background-color: var(--bg-primary);
     overflow: hidden;
+    overflow-y: auto;
     transition: .2s ease;
 }
 
@@ -172,8 +173,8 @@ main.side-navbar {
     }
 }
 
-@media only screen and (max-width: 700px) and (orientation: landscape) {
+/* @media only screen and (max-width: 700px) and (orientation: landscape) {
     .navbar {
         overflow-y: auto;
     }
-}
+} */
