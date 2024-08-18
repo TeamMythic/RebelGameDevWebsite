@@ -315,4 +315,19 @@
         })
         .catch(error => console.error('Error fetching the navbar:', error));
 </script>
+<script>
+    const elements = document.querySelectorAll('.hover-effect');
+
+    elements.forEach((element) => {
+    // Add touchstart event listener
+    element.addEventListener('touchstart', () => {
+        element.classList.add('touch-hover-effect');
+    });
+
+    element.addEventListener('touchend', () => {
+        // Remove touch effect
+        element.classList.remove('touch-hover-effect');
+    });
+    });
+</script>
 </html>

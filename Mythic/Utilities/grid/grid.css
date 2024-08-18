@@ -4,6 +4,12 @@
 For css to color filter generator for svg color change I used: https://angel-rs.github.io/css-color-filter-generator/
 */
 
+:root {
+    --grid--iconColor-normal: ;
+    --grid--iconColor-hover: ;
+    --grid--iconColor-active: ;
+}
+
 body.grid{
     display: flex;
     flex-direction: column;
@@ -126,7 +132,7 @@ body.grid{
 }
 
 .hexagon svg path {
-    fill: #e8eaed;
+    fill: #ffffff;
 }
 
 .grid .fa-primary svg {
@@ -160,6 +166,14 @@ body.grid{
 .container .hexagonArea .hexagon:active {
     background: rgb(116, 116, 116);
     transform: scale(0.65);
+}
+
+.container .hexagonArea .hexagon:hover svg path{
+    fill: rgb(0, 0, 0);
+}
+
+.container .hexagonArea .hexagon:active svg path{
+    fill: rgb(255, 255, 255);
 }
 
 
