@@ -4,13 +4,13 @@
     --border-radius: 10px;
 }
 
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
     width: 10px;
 }
-body::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     background: var(--track);
 }
-body::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background: var(--thumb);
     border-radius: var(--border-radius);
 }
