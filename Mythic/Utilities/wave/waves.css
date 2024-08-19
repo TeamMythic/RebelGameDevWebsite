@@ -48,12 +48,12 @@ section {
 }
 
 .layer2-top {
-    background-image: url('cloudy.svg');
-}
-.layer2-bottom {
     position: relative;
 }
-.layer2-bottom::before {
+.layer2-bottom {
+    background-image: url('cloudy.svg');
+}
+.layer2-top::before {
     content: '';
     position: absolute;
     top: 0;

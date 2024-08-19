@@ -1,0 +1,119 @@
+body.officers {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    color: white;
+    display: flex;
+    background-color: #12253f;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Oswald", sans-serif;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 5px rgb(17, 18, 32);
+}
+
+.container p {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 40px;
+    color: white;
+    font-size: 48px;
+    letter-spacing: 0.2px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards {
+    margin: 0 auto;
+    max-width: 80%;
+    padding: 0 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    box-sizing: border-box;
+}
+
+.cards .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #234169;
+    border-radius: 5px;
+    border: 0.2px solid #666666;
+    box-shadow: 0px 0px 10px 1px rgb(3, 14, 66);
+    overflow: hidden;
+    transition: all 0.3s;
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in width calculations */
+    /* No fixed width; allow grid to determine width */
+}
+
+.cards .card:hover {
+    border-color: #52D0FF;
+    transform: translateY(-8px);
+}
+
+.cards .card img {
+    border-radius: 100px;
+    aspect-ratio: 1 / 1;
+    width: 45%;
+}
+
+.cards .card h2 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-bottom: -10px;
+}
+
+.cards .card h4 {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    font-weight: 300;
+    margin-bottom: 50px;
+}
+
+.cards .card .social {
+    position: absolute;
+    bottom: -10px;
+    height: 15%;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    background-color: #252525;
+    clip-path: polygon(4% 0%, 96% 0%, 100% 100%, 0% 100%);
+    transition: 0.6s;
+    justify-content: center;
+    gap: 10px;
+}
+
+.cards .card .social svg {
+    color: #777777;
+    width: 5vw;
+    height: 25px;
+    transition: 0.3s;
+    margin-bottom: 5px;
+}
+
+.cards .card .social svg:hover {
+    color: #52D0FF;
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+
+/* Media Query for tablets and mobile devices */
+@media (max-width: 968px) {
+    .cards .card {
+        min-width: 250px;
+    }
+}
