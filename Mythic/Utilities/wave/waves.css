@@ -111,6 +111,7 @@ section p {
     font-family: "Oswald", sans-serif;
     font-style: normal;
     font-weight: 200;
+    text-align: justify;
 }
 
 /*Media Query for tablets and mobile devices*/
