@@ -136,7 +136,7 @@ main.side-navbar {
         height: 80px;
     }
     .nav-item {
-        width: 12.25%;
+        width: 100%;
     }
 
     .logo {
@@ -154,6 +154,9 @@ main.side-navbar {
     }
     .shifted-content {
         margin-left: auto;
+    }
+    .nav-item#non-mobile {
+        display: none;
     }
 }
 
