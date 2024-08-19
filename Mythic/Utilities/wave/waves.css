@@ -25,7 +25,7 @@ section {
     align-items: center;
     text-align: center;
     min-height: 50px;
-    padding: 0px 20vw;
+    padding: 0px 10vw;
 }
 
 .spacer {
@@ -80,14 +80,21 @@ section#title h1 {
     font-family: "Oswald", sans-serif;
     font-style: normal;
     font-weight: 600;
-    transform: scale(1) rotate(0deg);
-    animation: animateTitle 5s ease infinite;
     text-rendering: optimizeLegibility;
 }
 
-@keyframes animateTitle {
-    50% {
-      transform: scale( .75) rotate(0deg);
+/* Media query for if the "reduced motion" feature is off.
+   This enables the title animation. */
+@media (prefers-reduced-motion: no-preference) {
+    section#title h1 {
+        transform: scale(1) rotate(0deg);
+        animation: animateTitle 5s ease infinite;
+    }
+
+    @keyframes animateTitle {
+        50% {
+          transform: scale( .75) rotate(0deg);
+        }
     }
 }
   
@@ -104,6 +111,7 @@ section p {
     font-family: "Oswald", sans-serif;
     font-style: normal;
     font-weight: 200;
+    text-align: justify;
 }
 
 /*Media Query for tablets and mobile devices*/
