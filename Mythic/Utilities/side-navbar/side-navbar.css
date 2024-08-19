@@ -22,6 +22,9 @@ main.side-navbar {
     margin-left: 80px;
     padding: 20px;
 }
+.shifted-content {
+    margin-left: 80px;
+}
 
 .navbar {
     position: fixed;
@@ -148,6 +151,9 @@ main.side-navbar {
     }
     main.side-navbar {
         margin-left: 0px;
+    }
+    .shifted-content {
+        margin-left: auto;
     }
 }
 

@@ -24,7 +24,7 @@ body.officers {
     text-align: center;
     margin-bottom: 40px;
     color: white;
-    font-size: 48px;
+    font-size: 7vw;
     letter-spacing: 0.2px;
     text-align: center;
     justify-content: center;
@@ -39,6 +39,9 @@ body.officers {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     box-sizing: border-box;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .cards .card {
@@ -99,7 +102,7 @@ body.officers {
 
 .cards .card .social svg {
     color: #777777;
-    width: 5vw;
+    width: 15%;
     height: 25px;
     transition: 0.3s;
     margin-bottom: 5px;
@@ -109,11 +112,4 @@ body.officers {
     color: #52D0FF;
     cursor: pointer;
     transform: translateY(-5px);
-}
-
-/* Media Query for tablets and mobile devices */
-@media (max-width: 968px) {
-    .cards .card {
-        min-width: 250px;
-    }
 }
