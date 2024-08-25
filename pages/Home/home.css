@@ -1,0 +1,84 @@
+body {
+    --thumb: #ff4747;
+    font-size: 25px;
+    -webkit-tap-highlight-color: transparent;
+}
+.navbar {
+    --icon-primary: #7ebaff;
+    --icon-secondary: #4979df;
+}
+
+p a.link {
+    color: rgb(255, 155, 73);
+    text-decoration: none;
+    background-color: #16192b;
+    display: inline-block;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+}
+
+p span#one {
+    color: rgb(255, 104, 104);
+}
+p span#two {
+    color: rgb(106, 255, 114);
+}
+p span#three {
+    color: wheat;
+}
+p span.quote {
+    color: rgb(85, 162, 192);
+    font-style: italic;
+    font-weight: 300;
+}
+p span.mini-bold {
+    font-weight: 400;
+}
+p span.bold {
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.center-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.center-box a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.center-box img {
+    object-fit: contain; /*keep apsect ratio*/
+}
+
+/*Large Screen*/
+@media only screen and (min-width: 1200px) {
+    .center-box img {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/*Medium Screen*/
+@media only screen and (max-width: 1200px) {
+    .center-box img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/*Small Screen*/
+@media only screen and (max-width: 700px) {
+    .center-box img {
+        width: 50px;
+        height: 50px;
+    }
+}
