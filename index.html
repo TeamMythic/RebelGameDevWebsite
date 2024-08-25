@@ -468,33 +468,6 @@
         .then(response => response.text())
         .then(data => {
             document.getElementById('navbar').innerHTML = data;
-            document.querySelectorAll('a').forEach(function(link) {
-                // Prevent long-press context menu on mobile
-                link.addEventListener('touchstart', function(e) {
-                    // Prevent default action immediately on touchstart
-                    this.prevented = false;
-                    this.longPressTimer = setTimeout(() => {
-                        this.prevented = true;
-                        e.preventDefault(); // Prevent the context menu
-                    }, 500); // Adjust the time (500ms) as needed
-                });
-
-                link.addEventListener('touchend', function(e) {
-                    clearTimeout(this.longPressTimer);
-                    if (!this.prevented) {
-                        // Trigger the click event if it wasn't a long press
-                        link.click();
-                    }
-                });
-
-                link.addEventListener('touchmove', function(e) {
-                    clearTimeout(this.longPressTimer); // Cancel the timer on movement
-                });
-
-                link.addEventListener('contextmenu', function(e) {
-                    e.preventDefault(); // Disable right-click or long press context menu
-                });
-            });
         })
         .catch(error => console.error('Error fetching the navbar:', error));
 </script>
@@ -503,16 +476,16 @@ let isScrolling = false;
 
 window.addEventListener('scroll', function() {
     isScrolling = true;
-    clearTimeout(scrollTimer);
-    scrollTimer = setTimeout(function() {
+    setTimeout(function() {
         isScrolling = false;
-    }, 100);
-}, false);
+    }, 200); // Adjust this delay as needed
+});
 
-document.querySelectorAll('.center-box a').forEach(function(anchor) {
-    anchor.addEventListener('click', function(e) {
+document.querySelectorAll('a').forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
         if (isScrolling) {
             e.preventDefault();
+            return false;
         }
     });
 });
