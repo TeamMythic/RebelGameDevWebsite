@@ -452,4 +452,23 @@
         })
         .catch(error => console.error('Error fetching the navbar:', error));
 </script>
+<script>
+let isScrolling = false;
+
+window.addEventListener('scroll', function() {
+    isScrolling = true;
+    clearTimeout(scrollTimer);
+    scrollTimer = setTimeout(function() {
+        isScrolling = false;
+    }, 100);
+}, false);
+
+document.querySelectorAll('.center-box a').forEach(function(anchor) {
+    anchor.addEventListener('click', function(e) {
+        if (isScrolling) {
+            e.preventDefault();
+        }
+    });
+});
+</script>
 </html>
