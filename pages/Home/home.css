@@ -13,10 +13,22 @@ p a.link {
     text-decoration: none;
     background-color: #16192b;
     display: inline-block;
-    border-radius: 20px;
+    border-radius: 25px;
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 5px;
+    box-shadow: 0px 0px 10px 2px rgb(0, 0, 0);
+    transition: .5s;
+}
+
+p a.link:hover {
+    box-shadow: 0px 0px 10px 5px rgb(0, 0, 0);
+    border-radius: 0px;
+    background-color: #2c0606;
+}
+p a.link:active {
+    border-radius: 10px;
+    background-color: #1a8f9e;
 }
 
 p span#one {
@@ -52,11 +64,56 @@ p span.bold {
 .center-box a {
     display: flex;
     align-items: center;
+    flex-direction: column;
     justify-content: center;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
 }
+
+/* Tooltip styling */
+.center-box a::after {
+    display: none;
+    content: attr(tooltip); /* Tooltip text */
+    position: absolute;
+    bottom: 110%; /* Position the tooltip above the link */
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #0a1630;
+    border: black solid 2px;
+    border-radius: 10px;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    transition: opacity 0.5s;
+    word-wrap: break-word;
+    z-index: 1; /* Ensures tooltip is on top of other elements */
+}
+
+.center-box a:hover::after {
+    opacity: 1;
+    visibility: visible;
+    display:inline;
+    overflow: hidden;
+}
+
 
 .center-box img {
     object-fit: contain; /*keep apsect ratio*/
+    box-shadow: 0px 0px 10px 0px rgb(0, 0, 0);
+    transition: .2s;
+}
+.center-box p {
+    
+}
+.center-box a:hover img {
+    object-fit: contain; /*keep apsect ratio*/
+    box-shadow: 0px 0px 10px 5px rgb(0, 0, 0);
+    transform: rotate(15deg);
 }
 
 /*Large Screen*/
@@ -64,6 +121,7 @@ p span.bold {
     .center-box img {
         width: 150px;
         height: 150px;
+        border-radius: 35px;
     }
 }
 
@@ -72,6 +130,7 @@ p span.bold {
     .center-box img {
         width: 100px;
         height: 100px;
+        border-radius: 25px;
     }
 }
 
@@ -80,5 +139,6 @@ p span.bold {
     .center-box img {
         width: 50px;
         height: 50px;
+        border-radius: 15px;
     }
 }
