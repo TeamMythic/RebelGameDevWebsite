@@ -116,6 +116,7 @@ p span.bold {
     transform: rotate(15deg);
 }
 
+
 /*Large Screen*/
 @media only screen and (min-width: 1200px) {
     .center-box img {
