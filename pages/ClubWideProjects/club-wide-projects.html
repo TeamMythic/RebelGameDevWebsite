@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rebel Game Devs</title>
+    <link rel="stylesheet" a href="../../Mythic/Utilities/scrollbar/scrollbar.css">
+    <link rel="stylesheet" a href="../..//Mythic/Utilities/side-navbar/side-navbar.css">
+    <link rel = "stylesheet" href = "../../Mythic/Utilities/wave/waves.css">
+    <link rel="stylesheet" href="officers.css">
+</head>
+<style>
+    body {
+        --thumb: #ff4747;
+        font-size: 25px;
+        -webkit-tap-highlight-color: transparent;
+    }
+    .navbar {
+        --icon-primary: #7ebaff;
+        --icon-secondary: #4979df;
+    }
+</style>
+<body class="officers">
+    <nav id="navbar" class="navbar" style="z-index: 100;"></nav>
+    <div class="overlay" style="z-index: 99;"></div>
+    <div class="shifted-content">
+    
+        <section class="blue" id = "title">
+            <h1>
+                Club Wide Projects
+            </h1>
+        </section>
+        <div class="spacer layer2-top"></div>
+    
+        <!--NOTE: padding needs to be 0 (is 20px on sides), otherwise hex's will not function right in the rows-->
+        <section class="grey" > 
+        </section>
+        <div class="spacer layer1-bottom"></div>
+        <section class="blue" id = "about" style="padding: 0px 5vw;">
+            <div class="container" id="officers">
+                <p>
+                    Currently undergoing construction. Check back soon!
+                </p>
+               
+            </div>
+        </section>
+    
+        <div class="spacer layer1-top"></div>
+        <div class="spacer layer2-bottom" style="padding-bottom: 5vw;"></div>
+    </div>
+</body>
+<script type="module">
+    //../../
+    import { applySmoothScroll, scrollToHashOnLoad} from '../../Mythic/Utilities/Movement/scrollers.js';
+    applySmoothScroll('a[href^="#"]', 200);
+    scrollToHashOnLoad(0);
+</script>
+<script>
+    fetch('../../Mythic/Utilities/side-navbar/side-navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar').innerHTML = data;
+            document.querySelectorAll('a').forEach(function(link) {
+                // Prevent long-press context menu on mobile
+                link.addEventListener('touchstart', function(e) {
+                    // Prevent default action immediately on touchstart
+                    this.prevented = false;
+                    this.longPressTimer = setTimeout(() => {
+                        this.prevented = true;
+                        e.preventDefault(); // Prevent the context menu
+                    }, 500); // Adjust the time (500ms) as needed
+                });
+
+                link.addEventListener('touchend', function(e) {
+                    clearTimeout(this.longPressTimer);
+                    if (!this.prevented) {
+                        // Trigger the click event if it wasn't a long press
+                        link.click();
+                    }
+                });
+
+                link.addEventListener('touchmove', function(e) {
+                    clearTimeout(this.longPressTimer); // Cancel the timer on movement
+                });
+
+                link.addEventListener('contextmenu', function(e) {
+                    e.preventDefault(); // Disable right-click or long press context menu
+                });
+            });
+        })
+        .catch(error => console.error('Error fetching the navbar:', error));
+</script>
+
+</html>
