@@ -36,10 +36,19 @@ p a.link:active {
 p span#one {
     color: rgb(255, 104, 104);
 }
+h4 span#one{
+    color: rgb(255, 104, 104);
+}
 p span#two {
     color: rgb(106, 255, 114);
 }
+h4 span#two{
+    color: rgb(106, 255, 114);
+}
 p span#three {
+    color: wheat;
+}
+h4 span#three{
     color: wheat;
 }
 p span.quote {
@@ -54,6 +63,7 @@ p span.bold {
     font-weight: 800;
     text-transform: uppercase;
 }
+
 
 .center-box {
     display: flex;
